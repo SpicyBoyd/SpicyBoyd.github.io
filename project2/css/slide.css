@@ -1,0 +1,264 @@
+@media screen {
+    body {
+        position: relative;
+    }
+
+    .bg-yellow {
+        background-color: #fec608 !important;
+    }
+
+    .navbar-brand {
+        color: #2f2f33 !important;
+        font-weight: bold;
+        font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #2f2f33 !important;
+        font-weight: bold;
+        font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
+    }
+
+    .navbar-dark .navbar-nav .active>.nav-link,
+    .navbar-dark .navbar-nav .nav-link.active,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .navbar-dark .navbar-nav .show>.nav-link {
+        color: #FFF !important;
+    }
+
+    .container-fluid {
+        width: 90% !important;
+        font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
+    }
+
+    .my-name h3 {
+        font-weight: bold;
+    }
+
+    .person_img {
+        max-width: none;
+        width: 100%;
+        display: block;
+    }
+
+    .person_img img {
+        margin: 50px auto;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .person_details {
+        margin: 50px auto;
+        font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
+    }
+
+    .person_information {
+        width: 100%;
+    }
+
+    .social_icon li {
+        display: inline;
+        font-size: 30px;
+        margin: 0 3px;
+    }
+
+    .main_title {
+        text-align: center;
+        padding: 60px 0 30px 0;
+        width: 100%;
+    }
+
+    .title_border {
+        margin: 0 auto;
+        border: 1px solid #333333;
+        display: inline-block;
+        padding: 10px 23px;
+        background-color: rgba(23, 162, 184, 0.8);
+    }
+
+    .sub_title {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .skill_table {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .skill_table tbody tr td {
+        padding: 20px;
+    }
+
+    .iframe_style {
+        width: 100%;
+        height: 500px;
+    }
+
+    .ringtone_list li {
+        padding: 20px;
+    }
+
+    .experience_info {
+        text-align: left;
+    }
+    .youtube iframe {
+        height: 480px;
+    }
+
+    #music_1 {
+        margin-top: -200px;
+        right: -300px;
+    }
+
+    #music_2 {
+        margin-top: -100px;
+        right: -294px;
+    }
+
+    #music_3 {
+        margin-top: 0px;
+        right: -376px;
+    }
+
+    #music_4 {
+        margin-top: 100px;
+        right: -294px;
+    }
+
+    #music_5 {
+        margin-top: 200px;
+        right: -293px;
+    }
+
+    .modal-dialog {
+        max-width: 80% !important;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .youtube iframe {
+        height: 315px;
+    }
+
+    #music_1 {
+        margin-top: -200px;
+        right: -320px;
+    }
+
+    #music_2 {
+        margin-top: -100px;
+        right: -314px;
+    }
+
+    #music_3 {
+        margin-top: 0px;
+        right: -396px;
+    }
+
+    #music_4 {
+        margin-top: 100px;
+        right: -314px;
+    }
+
+    #music_5 {
+        margin-top: 200px;
+        right: -313px;
+    }
+
+    .modal-dialog {
+        max-width: 100% !important;
+        top: 50%;
+    }
+}
+
+.bg_parallax {
+    background-image: url("../img/IMG_20170708_091009.jpg");
+
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#common {
+    height: 800px;
+}
+
+.horizontal_align {
+    margin: auto !important;
+}
+
+.carousel_style {
+    text-align: center !important;
+}
+
+.image_style {
+    padding: 0 5px !important;
+}
+
+.image_selector {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 10px 10px 10px;
+}
+
+.modal-header {
+    padding: 0 1rem !important;
+}
+
+.modal-body {
+    padding: 0 0 1rem 0 !important;
+}
+
+.carousel-item img {
+    padding-top: 70px;
+}
+
+.bg-text {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bg-text h4 {
+    padding-top: 5px;
+    color: white;
+}
+
+.nav-item a:hover {
+    background-color: #ddd;
+}
+
+.image_style {
+    opacity: 0.6;
+}
+
+.active,
+.image_style:hover {
+    opacity: 1;
+}
+
+.music {
+    position: fixed;
+    top: 50%;
+    padding: 10px 20px;
+}
+
+#music_1:hover,
+#music_2:hover,
+#music_3:hover,
+#music_4:hover,
+#music_5:hover {
+    right: -10px;
+}
+
+.music .title {
+    padding-bottom: 5px;
+}
+
+#inner_1 .row, #inner_2 .row{
+    margin-left: 0;
+    margin-right: 0;
+}

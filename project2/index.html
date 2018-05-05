@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SpicyBoyd 相簿</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="楊博宇">
+    <meta name="keywords" content="COASTLINE 海線車站、GREENISLAND 綠島">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="SpicyBoyd Album">
+    <meta property="og:title" content="Album">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="收藏 SpicyBoyd 拍攝的相片">
+    <meta property="og:image" content="img/IMG_0086.jpg">
+    <meta property="og:url" content="http://140.116.245.148/WebCourse/students/f84059019/hw2/index.html">
+    <link rel="shortcut icon" href="img/icon.ico" />
+    <link rel="bookmark" href="img/icon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/image_data.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-expand-sm bg-yellow navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">SpicyBoyd Album</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../project1/index.html">SPICYBOYD 網頁</a></li>
+                <li class="nav-item"><a class="nav-link" href="#coastLine">COASTLINE 海線車站</a></li>
+                <li class="nav-item"><a class="nav-link" href="#greenIsland">GREENISLAND 綠島</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="bg_parallax">
+        <div id="common" class="container-fluid">
+            <div class="row">
+                <div class="col-md-9"></div>
+                <div class="main_title col-md-3" style="padding-top: 400px;">
+                    <h1 class="title_border text-light">希望之丘</h1>
+                </div>
+                <div class="col-md-9"></div>
+                <div class="col-md-3 border border-primary rounded bg-text">
+                    <br> 就算舉步維艱
+                    <br> 每走一個階梯都要揮灑汗水
+                    <br> 更要努力燃燒自己，瞄準好未來的方向
+                    <br> 期許未來，一定會登上那個目標
+                    <p style="text-align: right;"> - SpicyBoyd</p>
+                </div>
+            </div>
+        </div>
+        <div id="coastLine" class="container-fluid">
+            <div class="main_title">
+                <h1 class="title_border text-light">Coast Line 海線車站</h1>
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-2 border border-primary rounded text-center bg-text horizontal_align">
+                    <h4 class="font-weight-bold text-info">105.08.11-12</h4></div>
+                <div class="col-md-7 border border-primary rounded text-center bg-text">
+                    <h5 class="font-weight-bold text-primary" style="margin-top: .5rem;">很多時候，真正制約我們的<br>或許不是身處的環境，也不是別人異樣的眼光，其實是自己
+                        <br>一個人若不能了解自己，生命對他來說是一種懲罰
+                        <br>所以，試著一個人去旅行吧！或許與自己獨處的時候，可以聽到自己的聲音</h5>
+                </div>
+                <div class="col-md-2 border border-primary rounded text-center bg-text horizontal_align">
+                    <h4 class="font-weight-bold text-info">海線之旅</h4></div>
+            </div>
+            <a href="html/slide.html#coastLine">
+                <div id="image_demo_1" class="row border border-success rounded btn demo_border">
+                    <script>
+                    $(document).ready(function() {
+                        var demo = "";
+                        // 重複的程式碼                    
+                        for (var i = 0; i < coastLine.length; i++) {
+                            demo += '<div class="col-md-2 col-sm-2 col-2 image_demo"><img src="img/CoastLine/' + coastLine[i].src + '.jpg" class="rounded"></div>';
+                        }
+
+                        $("#image_demo_1").html(demo);
+                    });
+                    </script>
+                </div>
+            </a>
+        </div>
+        <div id="greenIsland" class="container-fluid">
+            <div class="main_title">
+                <h1 class="title_border text-light">Green Island 綠島</h1>
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-2 border border-primary rounded text-center bg-text horizontal_align">
+                    <h4 class="font-weight-bold text-info">101.07.18-19</h4></div>
+                <div class="col-md-7 border border-primary rounded font-weight-bold text-center bg-text">
+                    <h5 class="font-weight-bold text-primary" style="margin-top: .5rem;">青春是勇敢戰勝了怯懦，冒險代替了苟安
+                        <br> 歲月並不能使人老邁，使人老邁的是捨棄了理想與信念
+                    </h5>
+                </div>
+                <div class="col-md-2 border border-primary rounded text-center bg-text horizontal_align">
+                    <h4 class="font-weight-bold text-info">綠島隨拍</h4></div>
+            </div>
+            <a href="html/slide.html#greenIsland">
+                <div id="image_demo_2" class="row border border-success rounded btn demo_border">
+                    <script>
+                    $(document).ready(function() {
+                        var demo = "";
+                        // 重複的程式碼                    
+                        for (var i = 0; i < greenIsland.length; i++) {
+                            demo += '<div class="col-md-2 col-sm-2 col-2 image_demo"><img src="img/GreenIsland/' + greenIsland[i].src + '.jpg" class="rounded"></div>';
+                        }
+
+                        $("#image_demo_2").html(demo);
+                    });
+                    </script>
+                </div>
+            </a>
+        </div>
+        <div style="height: 100px;"></div>
+    </div>
+</body>
+
+</html>
