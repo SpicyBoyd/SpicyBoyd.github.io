@@ -18,16 +18,28 @@
     <link rel="shortcut icon" href="img/icon.ico" />
     <link rel="bookmark" href="img/icon.ico" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/blockUI.css">    
+    <link rel="stylesheet" type="text/css" href="css/backTopBtn.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="js/image_data.js"></script>
+    <script type="text/javascript" src="js/lazyload.js"></script>
+    <script type="text/javascript" src="js/backTopBtn.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-expand-sm bg-yellow navbar-dark fixed-top">
+    <script type="text/javascript">
+    $("body").css("overflow", "hidden");
+    var blockUI = document.createElement("div");
+    blockUI.setAttribute("id", "blockUI");
+    blockUI.innerHTML = '<div id="innerDiv"><img src="img/loading.gif"/>&nbsp;&nbsp;請稍後，網頁載入中...</div>'
+    document.body.appendChild(blockUI);
+    </script>
+    <nav class="navbar navbar-expand-sm bg-yellow navbar-dark">
         <a class="navbar-brand" href="#">SpicyBoyd Album</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -72,14 +84,14 @@
                 <div class="col-md-2 border border-primary rounded text-center bg-text horizontal_align">
                     <h4 class="font-weight-bold text-info">海線之旅</h4></div>
             </div>
-            <a href="html/slide.html#coastLine">
+            <a href="slide.html#coastLine">
                 <div id="image_demo_1" class="row border border-success rounded btn demo_border">
                     <script>
                     $(document).ready(function() {
                         var demo = "";
                         // 重複的程式碼                    
                         for (var i = 0; i < coastLine.length; i++) {
-                            demo += '<div class="col-md-2 col-sm-2 col-2 image_demo"><img src="img/CoastLine/' + coastLine[i].src + '.jpg" class="rounded"></div>';
+                            demo += '<div class="col-md-2 col-sm-2 col-2 image_demo"><img src="img/CoastLine/' + coastLine[i].src + '.jpg" class="rounded lazyload"></div>';
                         }
 
                         $("#image_demo_1").html(demo);
@@ -103,14 +115,14 @@
                 <div class="col-md-2 border border-primary rounded text-center bg-text horizontal_align">
                     <h4 class="font-weight-bold text-info">綠島隨拍</h4></div>
             </div>
-            <a href="html/slide.html#greenIsland">
+            <a href="slide.html#greenIsland">
                 <div id="image_demo_2" class="row border border-success rounded btn demo_border">
                     <script>
                     $(document).ready(function() {
                         var demo = "";
                         // 重複的程式碼                    
                         for (var i = 0; i < greenIsland.length; i++) {
-                            demo += '<div class="col-md-2 col-sm-2 col-2 image_demo"><img src="img/GreenIsland/' + greenIsland[i].src + '.jpg" class="rounded"></div>';
+                            demo += '<div class="col-md-2 col-sm-2 col-2 image_demo"><img src="img/GreenIsland/' + greenIsland[i].src + '.jpg" class="rounded lazyload"></div>';
                         }
 
                         $("#image_demo_2").html(demo);
@@ -118,9 +130,16 @@
                     </script>
                 </div>
             </a>
+            <a id="backTopBtn" class="btn backTopBtn"><i class="fa fa-arrow-circle-up fa-5x text-warning"></i></a>
         </div>
         <div style="height: 100px;"></div>
     </div>
+    <script type="text/javascript">
+    window.onload = function() {
+        $("#blockUI").remove();
+        $("body").css("overflow", "auto");
+    };
+    </script>
 </body>
 
 </html>

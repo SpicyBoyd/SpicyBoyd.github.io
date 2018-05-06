@@ -1,157 +1,146 @@
-@media screen{
-    body {
-        position: relative;
-    }
-
-    .bg-yellow {
-        background-color: #fec608 !important;
-    }
-
-    .navbar-brand {
-        color: #2f2f33 !important;
-        font-weight: bold;
-        font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
-    }
-
-    .navbar-dark .navbar-nav .nav-link {
-        color: #2f2f33 !important;
-        font-weight: bold;
-        font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
-    }
-
-    .navbar-dark .navbar-nav .active>.nav-link,
-    .navbar-dark .navbar-nav .nav-link.active,
-    .navbar-dark .navbar-nav .nav-link.show,
-    .navbar-dark .navbar-nav .show>.nav-link {
-        color: #FFF !important;
-    }
-
-    .container-fluid {
-        width: 90% !important;
-        font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
-    }
-
-    .my-name h3 {
-        font-weight: bold;
-    }
-
-    .person_img {
-        max-width: none;
-        width: 100%;
-        display: block;
-    }
-
-    .person_img img {
-        margin: 50px auto;
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    .person_details {
-        margin: 50px auto;
-        font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
-    }
-
-    .person_information {
-        width: 100%;
-    }
-
-    .social_icon li {
-        display: inline;
-        font-size: 30px;
-        margin: 0 3px;
-    }
-
-    .main_title {
-        text-align: center;
-        padding: 60px 0 30px 0;
-        width: 100%;
-    }
-
-    .title_border {
-        margin: 0 auto;
-        border: 1px solid #333333;
-        display: inline-block;
-        padding: 10px 23px;
-        background-color: rgba(23, 162, 184, 0.8);
-    }
-
-    .sub_title {
-        text-align: center;
-        width: 100%;
-        padding-bottom: 20px;
-    }
-
-    .skill_table {
-        width: 100%;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .skill_table tbody tr td {
-        padding: 20px;
-    }
-
-    .iframe_style {
-        width: 100%;
-        height: 500px;
-    }
-
-    .ringtone_list li {
-        padding: 20px;
-    }
-
-    .experience_info {
-        text-align: left;
-    }
-    .youtube iframe{
-        height: 480px;
-    }
+body {
+    position: relative;
 }
 
-@media screen and (max-width:980px){
-    .youtube iframe{
-        height: 315px;
-    }
+.bg-yellow {
+    background-color: #fec608 !important;
 }
 
-.demo_border{
+.navbar-brand {
+    color: #2f2f33 !important;
+    font-weight: bold;
+    font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #2f2f33 !important;
+    font-weight: bold;
+    font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: #FFF !important;
+}
+
+.container-fluid {
+    width: 90% !important;
+    font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
+}
+
+.my-name h3 {
+    font-weight: bold;
+}
+
+.person_img {
+    max-width: none;
+    width: 100%;
+    display: block;
+}
+
+.person_img img {
+    margin: 50px auto;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.person_details {
+    margin: 50px auto;
+    font-family: "微軟正黑體", "Microsoft JhengHei", "Times New Roman", Times, serif;
+}
+
+.person_information {
+    width: 100%;
+}
+
+.social_icon li {
+    display: inline;
+    font-size: 30px;
+    margin: 0 3px;
+}
+
+.main_title {
+    text-align: center;
+    padding: 60px 0 30px 0;
+    width: 100%;
+}
+
+.title_border {
+    margin: 0 auto;
+    border: 1px solid #333333;
+    display: inline-block;
+    padding: 10px 23px;
+    background-color: rgba(23, 162, 184, 0.8);
+}
+
+.sub_title {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.skill_table {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.skill_table tbody tr td {
+    padding: 20px;
+}
+
+.iframe_style {
+    width: 100%;
+    height: 500px;
+}
+
+.ringtone_list li {
+    padding: 20px;
+}
+
+.experience_info {
+    text-align: left;
+}
+
+.demo_border {
     display: flex !important;
     padding: 5px !important;
     background-color: rgba(248, 249, 250, 0.8) !important;
 }
 
-.image_demo{
+.image_demo {
     padding: 5px !important;
 }
 
-.image_demo img{
-    width:100%; 
-    display:inline;
+.image_demo img {
+    width: 100%;
+    display: inline;
 }
 
-.bg_parallax{
+.bg_parallax {
     background-image: url("../img/IMG_0086.jpg");
 
-    min-height: 500px; 
+    min-height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#common{
+#common {
     height: 800px;
 }
 
-.bg-text{
+.bg-text {
     background-color: rgba(248, 249, 250, 0.8);
 }
 
-.horizontal_align{
+.horizontal_align {
     margin: auto;
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
     background-color: #ddd;
 }
