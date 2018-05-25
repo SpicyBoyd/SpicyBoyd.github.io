@@ -1,0 +1,56 @@
+#logo{
+    height: 10vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 5px solid;
+}
+
+.homeNavButton{
+    height: 10vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 5px solid;
+}
+
+.dropdown {
+    height: 10vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 1px solid;
+}
+.dropdown-content {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    border: black 1px solid;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    height: 10vh;
+}
+
+.homeImg{
+    height: 30vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 5px solid;
+}
+
+#title{
+    height: 35vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 5px solid;
+}
+
+#shadow{
+    height: 15vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 5px solid;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}

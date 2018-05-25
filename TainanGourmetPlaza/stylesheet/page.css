@@ -1,0 +1,34 @@
+.navButton{
+    height: 10vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 5px solid;
+}
+
+.infoBar{
+    margin-top: 5vh;
+}
+
+.dropdown {
+    height: 10vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 1px solid;
+}
+.dropdown-content {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    border: black 1px solid;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    height: 10vh;
+}
+
+.infoPanel{
+    height: 25vh;
+    text-align: center;
+    vertical-align: middle;
+    border: black 5px solid;
+}
