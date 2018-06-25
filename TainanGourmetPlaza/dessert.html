@@ -43,7 +43,7 @@
     <div id="foodInfo"></div>
     <script type="text/javascript">
     $(document).ready(function() {
-        var userRef = firebase.database().ref('/food_list/soup');
+        var userRef = firebase.database().ref('/food_list/dessert');
         userRef.on('value', function(snapshot) {
             data = snapshotToArray(snapshot);
 

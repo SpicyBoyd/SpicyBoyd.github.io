@@ -1,8 +1,7 @@
 #logo{
-    height: 10vh;
+    height: 30vh;
     text-align: center;
     vertical-align: middle;
-    border: black 5px solid;
 }
 
 .homeNavButton{
@@ -30,10 +29,10 @@
 }
 
 .homeImg{
-    height: 30vh;
+    height: 40vh;
+    width: 100%;
     text-align: center;
     vertical-align: middle;
-    border: black 5px solid;
 }
 
 #title{

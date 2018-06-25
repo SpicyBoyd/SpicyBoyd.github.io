@@ -1,47 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
 
-        <link rel="stylesheet" type="text/css" href="stylesheet/page.css">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet/page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="js/firebaseInit.js"></script>
+</head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<body class="container" style="background-repeat:no-repeat; background-size: cover; background-position:center;">
+    <!-- fb comment box - script-->
+    <div id="fb-root"></div>
+    <script src="js/facebookInit.js"></script>
+    <div class="row">
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+    </div>
+    <div class="dropdown row hidden-lg hidden-md hidden-sm">
+        <a class="dropdown col-xs-12 hidden-lg hidden-md hidden-sm">Menu</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+    </div>
+    <div id="foodInfo"></div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var userRef = firebase.database().ref('/food_list/drink');
+        userRef.on('value', function(snapshot) {
+            data = snapshotToArray(snapshot);
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            //data 塞入 html
+            var demo = '';
+            for (var i = 0; i < data.length; i++) {
+                demo += '<div class="row infoBar"> <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div> <div class="infoPanel col-xs-12 col-sm-4 col-md-3 col-lg-3"><a href="' + data[i].image_main + '"> <img class="restaurantImg" src="' + data[i].image_main + '"> </a> </div> <div class="infoPanel col-xs-12 col-sm-8 col-md-7 col-lg-6"> <p class="restaurantTitle">';
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                if (data[i].official_website == null) {
+                    demo += '<a href="">';
+                } else {
+                    demo += '<a href="' + data[i].official_website + '">';
+                }
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
-    <body class="container" style="background-repeat:no-repeat; background-size: cover; background-position:center;">
-        <div class="row">
-            <a class="navButton col-xs-4 col-sm-2 col-md-2 col-lg-2">Btn</a>
-            <a class="navButton col-xs-4 col-sm-2 col-md-2 col-lg-2">Btn</a>
-            <a class="navButton col-xs-4 col-sm-2 col-md-2 col-lg-2">Btn</a>
-            <a class="navButton col-xs-4 col-sm-2 col-md-2 col-lg-2">Btn</a>
-            <a class="navButton col-xs-4 col-sm-2 col-md-2 col-lg-2">Btn</a>
-            <a class="navButton col-xs-4 col-sm-2 col-md-2 col-lg-2">Btn</a>
-        </div>
-        <div class="row infoBar">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div>
-            <div class="infoPanel col-xs-12 col-sm-4 col-md-3 col-lg-3"></div>
-            <div class="infoPanel col-xs-12 col-sm-8 col-md-7 col-lg-7"></div>
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div>
-        </div>
-        <div class="row infoBar">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div>
-            <div class="infoPanel col-xs-12 col-sm-4 col-md-3 col-lg-3"></div>
-            <div class="infoPanel col-xs-12 col-sm-8 col-md-7 col-lg-7"></div>
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div>
-        </div>
-        <div class="row infoBar">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div>
-            <div class="infoPanel col-xs-12 col-sm-4 col-md-3 col-lg-3"></div>
-            <div class="infoPanel col-xs-12 col-sm-8 col-md-7 col-lg-7"></div>
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div>
-        </div>
-    </body>
+                demo += data[i].restaurant + '</a> </p> <br/> <p class="restaurantSubTitle">——' + data[i].restaurant_english + '</p> <p class="restaurantSubTitle">——' + data[i].word + '</p> <p class="restaurantSubTitle">——' + data[i].address + '</p> <p class="restaurantSubTitle">——' + data[i].opening_hour + '</p> </div> <div class="col-lg-1 mapButton"> <a href="' + data[i].google_map + '"> <img class="mapImg" src="img/MapIcon.png"> </a> </div> <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div> <div class="clearfix"></div> <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div> <div class="infoBar-content col-xs-12 col-sm-12 col-md-10 col-lg-10"> <div class="col-lg-1"></div> <a href="' + data[i].image_1 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_1 + '"> </a> <a href="' + data[i].image_2 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_2 + '"> </a> <a href="' + data[i].image_3 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_3 + '"> </a> <a href="' + data[i].image_4 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_4 + '"> </a>'
+
+                if (data[i].image_5 == null) {
+                    demo += '';
+                } else {
+                    demo += '<a href="' + data[i].image_5 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_5 + '"> </a>';
+                }
+
+                demo += '</div> <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div> </div>'
+            }
+
+            $("#foodInfo").html(demo);
+        });
+
+        //轉換 json object to json array
+        function snapshotToArray(snapshot) {
+            var returnArr = [];
+            snapshot.forEach(function(childSnapshot) {
+                var item = childSnapshot.val();
+                item.key = childSnapshot.key;
+                returnArr.push(item);
+            });
+            return returnArr;
+        };
+    });
+    </script>
+    <!-- fb comment box -->
+    <div class="row">
+        <div class="fb-comments" data-href="https://spicyboyd.github.io/TainanGourmetPlaza/" data-width="100%" data-numposts="5"></div>
+    </div>
+</body>
+
 </html>
