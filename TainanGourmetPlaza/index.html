@@ -12,90 +12,98 @@
     <meta property="og:title" content="Tainan Gourmet">
     <meta property="og:type" content="website">
     <meta property="og:description" content="The most gourmet food in Taiwan">
-    <meta property="og:image" content="https://spicyboyd.github.io/TainanGourmetPlaza/img/Logo.png">
+    <meta property="og:image" content="https://i.imgur.com/Dy26TFU.png">
     <meta property="og:url" content="https://spicyboyd.github.io/TainanGourmetPlaza">
     <meta property="fb:app_id" content="1805550089560971" />
+    <link rel="shortcut icon" href="img/Gourmet.ico" />
+    <link rel="bookmark" href="img/Gourmet.ico" />
     <link rel="stylesheet" type="text/css" href="stylesheet/home.css">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 
-<body class="container-fluid" style="background-repeat:no-repeat; background-size: cover; background-position:center;">
-    <div id="logo" class="row">
+<body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
+    <!-- Logo -->
+    <div id="logo">
         <img src="https://i.imgur.com/Dy26TFU.png">
     </div>
-    <div class="row">
-        <a class="homeNavButton hidden-xs hidden-sm col-md-3 col-lg-3"></a>
-        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
-        <a class="homeNavButton hidden-xs col-sm-2 col-md-1 col-lg-1">Btn</a>
-        <a class="homeNavButton hidden-xs col-sm-2 col-md-1 col-lg-1">Btn</a>
-        <a class="homeNavButton hidden-xs col-sm-2 col-md-1 col-lg-1">Btn</a>
-        <a class="homeNavButton hidden-xs col-sm-2 col-md-1 col-lg-1">Btn</a>
-        <a class="homeNavButton hidden-xs col-sm-2 col-md-1 col-lg-1">Btn</a>
-        <a class="homeNavButton hidden-xs col-sm-2 col-md-1 col-lg-1">Btn</a>
-        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
-        <a class="homeNavButton hidden-xs hidden-sm col-md-3 col-lg-3"></a>
-        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
-    </div>
-    <div class="dropdown row hidden-lg hidden-md hidden-sm">
-        <a class="dropdown col-xs-12 hidden-lg hidden-md hidden-sm">Menu</a>
-        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
-        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
-        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
-        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
-        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
-        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
-    </div>
-    <div class="row hidden-xs">
-        <img class="homeImg col-lg-4" src="https://4.share.photo.xuite.net/balispa543/146eafb/7660734/291034941_x.jpg">
-        <img class="homeImg col-lg-4" src="http://www.deelyhouse.com/wp-content/uploads/2016/03/AnpingCastle_A_01.jpg">
-        <img class="homeImg col-lg-4" src="https://i.imgur.com/5MQMXvf.jpg">
-        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
-    </div>
-    <div id="myCarousel" class="carousel slide hidden-lg hidden-sm hidden-md col-xs-12 carousalArea" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img class="carousalImg" src="https://imgur.com/a/8Svm4vz" alt="Cat">
-            </div>
-            <div class="item">
-                <img class="carousalImg" src="https://imgur.com/a/oKBE5Fx" alt="Cat">
-            </div>
-            <div class="item">
-                <img class="carousalImg" src="https://imgur.com/a/cxBO14U" alt="Cat">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>Menu
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav" style="text-align: center; margin: auto;">
+                <li class="nav-item"><a class="nav-link" href="appetizer.html">Appetizer</a></li>
+                <li class="nav-item"><a class="nav-link" href="breakfast.html">Breakfast</a></li>
+                <li class="nav-item"><a class="nav-link" href="dessert.html">Dessert</a></li>
+                <li class="nav-item"><a class="nav-link" href="drink.html">Drink</a></li>
+                <li class="nav-item"><a class="nav-link" href="mainCourse.html">Main Course</a></li>
+                <li class="nav-item"><a class="nav-link" href="secretMenu.html">Secret Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="soup.html">Soup</a></li>
+                <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Photo lg bigger-->
+    <div class="d-none d-lg-block">
+        <div class="container-fluid">
+            <div class="row" style="display: flex;">
+                <img class="homeImg col-lg-4" src="https://i.imgur.com/cBQQtkI.jpg">
+                <img class="homeImg col-lg-4" src="https://i.imgur.com/NjWUzFH.jpg">
+                <img class="homeImg col-lg-4" src="https://i.imgur.com/qoOznm3.jpg">
             </div>
         </div>
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
     </div>
-    <div class="row">
-        <div id="title" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1>Title</h1>
-            <br/> subtitle
+    <!-- Photo lg smaller-->
+    <div class="d-lg-none">
+        <div id="photo" class="carousel slide" data-ride="carousel" style="text-align: center;">
+            <ul class="carousel-indicators">
+                <li data-target="#photo" data-slide-to="0" class="active"></li>
+                <li data-target="#photo" data-slide-to="1"></li>
+                <li data-target="#photo" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active row">
+                    <img class="rounded col-md-12" src="https://i.imgur.com/cBQQtkI.jpg">
+                </div>
+                <div class="carousel-item row">
+                    <img class="rounded col-md-12" src="https://i.imgur.com/NjWUzFH.jpg">
+                </div>
+                <div class="carousel-item row">
+                    <img class="rounded col-md-12" src="https://i.imgur.com/qoOznm3.jpg">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#photo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+            <a class="carousel-control-next" href="#photo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
         </div>
-        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
     </div>
+    <!-- 文字敘述 -->
+    <div class="container-fluid">
+        <div class="row">
+            <div id="title" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>Title</h1>
+                <br/> subtitle
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- shadow -->
     <div class="row">
-        <div id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">shadow</div>
-        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
+        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="https://i.imgur.com/Vr8f33T.png">
+        <div class="clearfix"></div>
     </div>
+    <!-- footer -->
 </body>
 
 </html>

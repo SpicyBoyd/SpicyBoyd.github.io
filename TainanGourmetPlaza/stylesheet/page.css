@@ -1,93 +1,113 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
-.navButton{
-    height: 10vh;
-    text-align: center;
-    vertical-align: middle;
-    border: black 5px solid;
-}
-
-.infoBar{
+.infoBar {
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
 
-.infoPanel{
-    height: 25vh;
+.infoPanel {
     text-align: center;
     vertical-align: middle;
     box-shadow: 0px 3px grey;
 }
 
-.infoBar-content{
+.infoBar-content {
     display: none;
     text-align: center;
     vertical-align: middle;
     margin-bottom: 5vh;
-    box-shadow: 3px 3px grey;
 }
 
 .infoBar:hover .infoBar-content {
     display: block;
-    height: 20vh;
 }
 
-.dropdown {
-    height: 10vh;
-    text-align: center;
-    vertical-align: middle;
-    border: black 1px solid;
-}
-.dropdown-content {
-    display: none;
-    text-align: center;
-    vertical-align: middle;
-    border: black 1px solid;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-    height: 10vh;
-}
-
-.restaurantImg{
+.restaurantImg {
     text-align: center;
     margin-top: 2.5%;
-    background-repeat: fill;
-    height: 80%;
-    width: 80%;
+    height: 90%;
+    width: 90%;
     -webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 
-.restaurantTitle{
+.otherImg {
+    text-align: center;
+    margin-top: 2%;
+    height: 80%;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.restaurantTitle {
     font-family: Noto Sans TC;
     font-size: 2vw;
     text-align: left;
     height: 15px;
 }
 
-.restaurantSubTitle{
+.restaurantSubTitle {
     font-family: Noto Sans TC;
-    font-size: 1vw;
+    font-size: 1.3vw;
     text-align: left;
     color: #AAAAAA;
 }
 
-.mapButton{
-    margin-top: 1vh;
+.mapButton {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     background-color: #AAAAAA;
     vertical-align: bottom;
-    height: 24vh;
     box-shadow: 3px 3px grey;
+    display: block;
 }
 
-.mapImg{
-    margin-top: 100%;
-    margin-left: 20%;
-    height: 20%;
-    width: 60%;
+.mapImg {
+    margin: 10px auto;
+    width: 80%;
 }
 
-.max{width:100%;height:auto;}
-.min{width:100px;height:auto;}
+#logo {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#shadow {
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media screen and (min-width:992px) {
+    .mapButton:hover {
+        background-color: #007bff;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .restaurantTitle {
+        font-family: Noto Sans TC;
+        font-size: x-large;
+        text-align: left;
+        height: 15px;
+    }
+
+    .restaurantSubTitle {
+        font-family: Noto Sans TC;
+        font-size: initial;
+        text-align: left;
+        color: #AAAAAA;
+    }
+
+    .otherImg {
+    text-align: center;
+    margin-top: 2%;
+    height: initial;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+}

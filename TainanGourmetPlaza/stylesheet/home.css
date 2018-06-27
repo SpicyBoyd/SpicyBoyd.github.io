@@ -1,55 +1,32 @@
 #logo{
-    height: 30vh;
     text-align: center;
     vertical-align: middle;
-}
-
-.homeNavButton{
-    height: 10vh;
-    text-align: center;
-    vertical-align: middle;
-    border: black 5px solid;
-}
-
-.dropdown {
-    height: 10vh;
-    text-align: center;
-    vertical-align: middle;
-    border: black 1px solid;
-}
-.dropdown-content {
-    display: none;
-    text-align: center;
-    vertical-align: middle;
-    border: black 1px solid;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-    height: 10vh;
 }
 
 .homeImg{
-    height: 40vh;
-    width: 100%;
+    height: 100%;
+    flex: 1;
     text-align: center;
     vertical-align: middle;
 }
 
 #title{
-    height: 35vh;
     text-align: center;
     vertical-align: middle;
     border: black 5px solid;
 }
 
 #shadow{
-    height: 15vh;
+    height: 100%;
     text-align: center;
     vertical-align: middle;
-    border: black 5px solid;
 }
 
-.carousel-inner img {
-    width: 100%;
-    height: 100%;
+#photo .carousel-inner .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#photo .carousel-inner .row img{
+    padding: 0px;
 }
