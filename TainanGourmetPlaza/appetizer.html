@@ -2,20 +2,15 @@
 <html>
 
 <head>
-    <title>Appetizer</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/Gourmet.ico" />
-    <link rel="bookmark" href="img/Gourmet.ico" />
     <link rel="stylesheet" type="text/css" href="stylesheet/page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Firebase App is always required and must be first -->
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
     <!-- Add additional services that you want to use -->
@@ -24,65 +19,52 @@
     <script src="js/firebaseInit.js"></script>
 </head>
 
-<body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
+<body class="container" style="background-repeat:no-repeat; background-size: cover; background-position:center;">
     <!-- fb comment box - script-->
     <div id="fb-root"></div>
     <script src="js/facebookInit.js"></script>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>Menu
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav" style="text-align: center; margin: auto;">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="breakfast.html">Breakfast</a></li>
-                <li class="nav-item"><a class="nav-link" href="dessert.html">Dessert</a></li>
-                <li class="nav-item"><a class="nav-link" href="drink.html">Drink</a></li>
-                <li class="nav-item"><a class="nav-link" href="mainCourse.html">Main Course</a></li>
-                <li class="nav-item"><a class="nav-link" href="secretMenu.html">Secret Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="soup.html">Soup</a></li>
-                <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Logo -->
-    <div id="logo">
-        <img src="https://i.imgur.com/Dy26TFU.png">
+    <div class="row">
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
+        <a class="navButton hidden-xs col-sm-2 col-md-2 col-lg-2">Btn</a>
     </div>
-    <!-- foodInfo -->
-    <div id="foodInfo" class="container-fluid"></div>
+    <div class="dropdown row hidden-lg hidden-md hidden-sm">
+        <a class="dropdown col-xs-12 hidden-lg hidden-md hidden-sm">Menu</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+        <a class="dropdown-content col-xs-12 hidden-lg hidden-md hidden-sm">Btn</a>
+    </div>
+    <div id="foodInfo"></div>
     <script type="text/javascript">
     $(document).ready(function() {
         var userRef = firebase.database().ref('/food_list/appetizer');
         userRef.on('value', function(snapshot) {
             data = snapshotToArray(snapshot);
-
             //data 塞入 html
             var demo = '';
             for (var i = 0; i < data.length; i++) {
-                demo += '<div id="' + data[i].restaurant_english + '" class="infoBar"> <div class="row"> <div class="d-none d-lg-block col-lg-1"></div> <div class="infoPanel col-lg-3"><a href="' + data[i].image_main + '" target="_blank"> <img class="restaurantImg" src="' + data[i].image_main + '"> </a> </div> <div class="infoPanel col-lg-6"> <p class="restaurantTitle">';
-
+                demo += '<div class="row infoBar"> <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div> <div class="infoPanel col-xs-12 col-sm-4 col-md-3 col-lg-3"><a href="' + data[i].image_main + '"> <img class="restaurantImg" src="' + data[i].image_main + '"> </a> </div> <div class="infoPanel col-xs-12 col-sm-8 col-md-7 col-lg-6"> <p class="restaurantTitle">';
                 if (data[i].official_website == null) {
-                    demo += data[i].restaurant;
+                    demo += '<a href="">';
                 } else {
-                    demo += '<a href="' + data[i].official_website + '" target="_blank">' + data[i].restaurant + '</a>';
+                    demo += '<a href="' + data[i].official_website + '">';
                 }
-
-                demo += '</p> <br/> <p class="restaurantSubTitle">——' + data[i].restaurant_english + '</p> <p class="restaurantSubTitle">——' + data[i].word + '</p> <p class="restaurantSubTitle">——' + data[i].address + '</p> <p class="restaurantSubTitle">——' + data[i].opening_hour + '</p> </div> <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="' + data[i].google_map + '" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div> <div class="d-lg-none text-center" style="margin:auto;"> <a class="mapButton" href="' + data[i].google_map + '" target="_blank"> <p style="margin: 10px;">Google Map</p> </a> </div><div class="d-none d-lg-block col-lg-1"></div> </div> <div class="row"><div class="clearfix"></div> <div class="d-none d-lg-block col-lg-1"></div> <div class="infoBar-content col-lg-10"> <a href="' + data[i].image_1 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_1 + '"> </a> <a href="' + data[i].image_2 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_2 + '"> </a> <a href="' + data[i].image_3 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_3 + '"> </a> <a href="' + data[i].image_4 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_4 + '"> </a>'
-
+                demo += data[i].restaurant + '</a> </p> <br/> <p class="restaurantSubTitle">——' + data[i].restaurant_english + '</p> <p class="restaurantSubTitle">——' + data[i].word + '</p> <p class="restaurantSubTitle">——' + data[i].address + '</p> <p class="restaurantSubTitle">——' + data[i].opening_hour + '</p> </div> <div class="col-lg-1 mapButton"> <a href="' + data[i].google_map + '"> <img class="mapImg" src="img/MapIcon.png"> </a> </div> <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div> <div class="clearfix"></div> <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div> <div class="infoBar-content col-xs-12 col-sm-12 col-md-10 col-lg-10"> <div class="col-lg-1"></div> <a href="' + data[i].image_1 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_1 + '"> </a> <a href="' + data[i].image_2 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_2 + '"> </a> <a href="' + data[i].image_3 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_3 + '"> </a> <a href="' + data[i].image_4 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_4 + '"> </a>'
                 if (data[i].image_5 == null) {
                     demo += '';
                 } else {
-                    demo += '<a href="' + data[i].image_5 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_5 + '"> </a>';
+                    demo += '<a href="' + data[i].image_5 + '"> <img class="restaurantImg col-lg-2" src="' + data[i].image_5 + '"> </a>';
                 }
-
-                demo += '</div> <div class="d-none d-lg-block col-lg-1"></div> </div> </div>'
+                demo += '</div> <div class="hidden-xs hidden-sm col-md-1 col-lg-1"></div> </div>'
             }
-
             $("#foodInfo").html(demo);
         });
-
         //轉換 json object to json array
         function snapshotToArray(snapshot) {
             var returnArr = [];
