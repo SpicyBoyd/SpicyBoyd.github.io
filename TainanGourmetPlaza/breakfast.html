@@ -26,12 +26,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
-    <!-- Add additional services that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
-    <!-- Initialize Firebase -->
-    <script src="js/firebaseInit.js"></script>
 </head>
 
 <body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
@@ -58,49 +52,278 @@
         <img src="https://i.imgur.com/Dy26TFU.png">
     </div>
     <!-- foodInfo -->
-    <div id="foodInfo" class="container-fluid"></div>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var userRef = firebase.database().ref('/food_list/breakfast');
-        userRef.on('value', function(snapshot) {
-            data = snapshotToArray(snapshot);
-
-            //data 塞入 html
-            var demo = '';
-            for (var i = 0; i < data.length; i++) {
-                demo += '<div id="' + data[i].restaurant_english + '" class="infoBar"> <div class="row"> <div class="d-none d-lg-block col-lg-1"></div> <div class="infoPanel col-lg-3"><a href="' + data[i].image_main + '" target="_blank"> <img class="restaurantImg" src="' + data[i].image_main + '"> </a> </div> <div class="infoPanel col-lg-6"> <p class="restaurantTitle">';
-
-                if (data[i].official_website == null) {
-                    demo += data[i].restaurant;
-                } else {
-                    demo += '<a href="' + data[i].official_website + '" target="_blank">' + data[i].restaurant + '</a>';
-                }
-
-                demo += '</p> <br/> <p class="restaurantSubTitle">——' + data[i].restaurant_english + '</p> <p class="restaurantSubTitle">——' + data[i].word + '</p> <p class="restaurantSubTitle">——' + data[i].address + '</p> <p class="restaurantSubTitle">——' + data[i].opening_hour + '</p> </div> <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="' + data[i].google_map + '" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div> <div class="d-lg-none text-center" style="margin:auto;"> <a class="mapButton" href="' + data[i].google_map + '" target="_blank"> <p style="margin: 10px;">Google Map</p> </a> </div><div class="d-none d-lg-block col-lg-1"></div> </div> <div class="row"><div class="clearfix"></div> <div class="d-none d-lg-block col-lg-1"></div> <div class="infoBar-content col-lg-10"> <a href="' + data[i].image_1 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_1 + '"> </a> <a href="' + data[i].image_2 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_2 + '"> </a> <a href="' + data[i].image_3 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_3 + '"> </a> <a href="' + data[i].image_4 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_4 + '"> </a>'
-
-                if (data[i].image_5 == null) {
-                    demo += '';
-                } else {
-                    demo += '<a href="' + data[i].image_5 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_5 + '"> </a>';
-                }
-
-                demo += '</div> <div class="d-none d-lg-block col-lg-1"></div> </div> </div>'
-            }
-
-            $("#foodInfo").html(demo);
-        });
-        //轉換 json object to json array
-        function snapshotToArray(snapshot) {
-            var returnArr = [];
-            snapshot.forEach(function(childSnapshot) {
-                var item = childSnapshot.val();
-                item.key = childSnapshot.key;
-                returnArr.push(item);
-            });
-            return returnArr;
-        };
-    });
-    </script>
+    <div id="foodInfo" class="container-fluid">
+        <div id="A-Jay Handmade Chinese Omelet" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/n0poRjH.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/n0poRjH.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/%E9%98%BF%E6%9D%B0%E6%89%8B%E5%B7%A5%E8%9B%8B%E9%A4%85-120340591339485/" target="_blank">阿杰手工蛋餅店</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——A-Jay Handmade Chinese Omelet</p>
+                    <p class="restaurantSubTitle">——Toast, Burger, Egg Omelet</p>
+                    <p class="restaurantSubTitle">——No.343, Wufei Street, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——06:00~12:00 from TUE to FRI; 07:00~12:30 on SAT &amp; SUN; closed on MON</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/5huQQTwyHRA2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/5huQQTwyHRA2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/nIpOuI4.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/nIpOuI4.jpg"> </a> <a href="https://i.imgur.com/XigZhlc.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/XigZhlc.jpg"> </a> <a href="https://i.imgur.com/7vdtAXC.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/7vdtAXC.jpg"> </a> <a href="https://i.imgur.com/GJnxiat.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/GJnxiat.jpg"> </a><a href="https://i.imgur.com/9o2BqmB.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/9o2BqmB.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="A-Tang Salty Congee" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/zoAGGFX.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/zoAGGFX.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/%E9%98%BF%E5%A0%82%E9%B9%B9%E7%B2%A5-167979336613948/" target="_blank">阿堂鹹粥</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——A-Tang Salty Congee</p>
+                    <p class="restaurantSubTitle">——Salty Congee</p>
+                    <p class="restaurantSubTitle">——No.728, Section 1, Ximen Rd, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——05:00~12:30, closed on TUE</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/QfrkC58b4TM2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/QfrkC58b4TM2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/Hwgn6G2.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Hwgn6G2.jpg"> </a> <a href="https://i.imgur.com/VKmPIGZ.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/VKmPIGZ.jpg"> </a> <a href="https://i.imgur.com/HmPGqv2.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/HmPGqv2.jpg"> </a> <a href="https://i.imgur.com/H3D6CQt.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/H3D6CQt.jpg"> </a><a href="https://i.imgur.com/bHB3exa.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/bHB3exa.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Chang's Charcoal Grill Food" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/tW8Jl4Z.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/tW8Jl4Z.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/pages/%E5%B0%8F%E7%92%8B%E7%A2%B3%E7%83%A4%E8%BC%95%E9%A3%9F/201498409874727" target="_blank">小璋炭烤輕食</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Chang's Charcoal Grill Food</p>
+                    <p class="restaurantSubTitle">——Toast Sandwich</p>
+                    <p class="restaurantSubTitle">——No.88, Xihua South Street, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——06:00~19:00; 06:00~14:00 on SUN</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/p8afb3UWP1R2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/p8afb3UWP1R2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/tovxZtP.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/tovxZtP.jpg"> </a> <a href="https://i.imgur.com/oKJpbqf.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/oKJpbqf.jpg"> </a> <a href="https://i.imgur.com/DrW7wDj.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/DrW7wDj.jpg"> </a> <a href="https://i.imgur.com/A1eiVD2.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/A1eiVD2.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Harry Fast Food" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/uvpmsc1.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/uvpmsc1.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle">哈利速食</p>
+                    <br>
+                    <p class="restaurantSubTitle">——Harry Fast Food</p>
+                    <p class="restaurantSubTitle">——Sandwich</p>
+                    <p class="restaurantSubTitle">——No.8, Lane 138, Zhongzheng Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——07:30~12:30, closed on WED</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/KqEGuupuhBp" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/KqEGuupuhBp" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/tToBLy4.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/tToBLy4.jpg"> </a> <a href="https://i.imgur.com/JHdh5wv.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/JHdh5wv.jpg"> </a> <a href="https://i.imgur.com/RtwY3yi.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/RtwY3yi.jpg"> </a> <a href="https://i.imgur.com/s3ijFaL.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/s3ijFaL.jpg"> </a><a href="https://i.imgur.com/jFyTtg2.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/jFyTtg2.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Morning-Finding Breakfast" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/tOEJ54h.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/tOEJ54h.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/CtrlFgoodmorning/" target="_blank">尋早早餐</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Morning-Finding Breakfast</p>
+                    <p class="restaurantSubTitle">——Toast, Egg Omelet</p>
+                    <p class="restaurantSubTitle">——No.123, Wufei Street, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——07:30~14:00; 08:00~14:00 on SAT &amp; SUN; closed on THU</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/XmDcc6ECfGm" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/XmDcc6ECfGm" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/KgHeg00.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/KgHeg00.jpg"> </a> <a href="https://i.imgur.com/m2J4hM0.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/m2J4hM0.jpg"> </a> <a href="https://i.imgur.com/0boqauF.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/0boqauF.jpg"> </a> <a href="https://i.imgur.com/UhBSPN1.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/UhBSPN1.jpg"> </a><a href="https://i.imgur.com/rzXyT70.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/rzXyT70.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Mother Xu's Breakfast" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/DToG6kc.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/DToG6kc.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/%E5%BE%90%E5%AA%BD%E5%AA%BD%E6%97%A9%E9%A4%90%E5%BA%97-206521762700746/" target="_blank">徐媽媽早餐店</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Mother Xu's Breakfast</p>
+                    <p class="restaurantSubTitle">——White Radish Patty, Egg Omelet</p>
+                    <p class="restaurantSubTitle">——No.347, You'ai Street, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——05:00~11:30</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/oZtUniiLh7m" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/oZtUniiLh7m" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/TGR5YUl.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/TGR5YUl.jpg"> </a> <a href="https://i.imgur.com/Igq4Kgh.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Igq4Kgh.jpg"> </a> <a href="https://i.imgur.com/YlHSbu2.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/YlHSbu2.jpg"> </a> <a href="https://i.imgur.com/k7avNbM.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/k7avNbM.jpg"> </a><a href="https://i.imgur.com/wiRPP3k.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/wiRPP3k.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Nameless Breakfast" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/DFRl827.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/DFRl827.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle">無名早餐</p>
+                    <br>
+                    <p class="restaurantSubTitle">——Nameless Breakfast</p>
+                    <p class="restaurantSubTitle">——Toast, Egg Omelet</p>
+                    <p class="restaurantSubTitle">——No.169, Section 3, Minquan Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——06:30~12:00, closed on THU &amp; SUN</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/qh5SeA9EKsu" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/qh5SeA9EKsu" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/rLeVAXR.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/rLeVAXR.jpg"> </a> <a href="https://i.imgur.com/hhXgGv5.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/hhXgGv5.jpg"> </a> <a href="https://i.imgur.com/ZhjeS3O.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/ZhjeS3O.jpg"> </a> <a href="https://i.imgur.com/yh8QZ3M.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/yh8QZ3M.jpg"> </a><a href="https://i.imgur.com/FnTUQc8.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/FnTUQc8.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Red Breakfast" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/JPEarFJ.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/JPEarFJ.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/%E7%B4%85%E8%A8%98%E6%97%A9%E9%BB%9E-1418378361747917/" target="_blank">紅記早餐</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Red Breakfast</p>
+                    <p class="restaurantSubTitle">——Chinese Egg Omelet</p>
+                    <p class="restaurantSubTitle">——No.325, Wufei Street, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——06:30~12:00 from TUE to FRI; 07:00~12:00 on SAT &amp; SUN; closed on MON</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/wobiet46WvM2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/wobiet46WvM2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/BQMZtXG.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/BQMZtXG.jpg"> </a> <a href="https://i.imgur.com/3YReXqP.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/3YReXqP.jpg"> </a> <a href="https://i.imgur.com/YV4MWXz.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/YV4MWXz.jpg"> </a> <a href="https://i.imgur.com/diBaPkg.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/diBaPkg.jpg"> </a><a href="https://i.imgur.com/7sMyTzB.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/7sMyTzB.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Soy Milk Zong" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/ZsTsNB6.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/ZsTsNB6.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/%E8%B1%86-%E5%A5%B6-%E5%AE%97-578361135556432/" target="_blank">豆奶宗</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Soy Milk Zong</p>
+                    <p class="restaurantSubTitle">——Taiwanese Breakfast</p>
+                    <p class="restaurantSubTitle">——No.175, Section 2, Fuqian Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——21:40~10:30, closed on SUN</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/VRXssz9kyjJ2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/VRXssz9kyjJ2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/5ilTh7q.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/5ilTh7q.jpg"> </a> <a href="https://i.imgur.com/9B8lxcx.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/9B8lxcx.jpg"> </a> <a href="https://i.imgur.com/riAfwUe.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/riAfwUe.jpg"> </a> <a href="https://i.imgur.com/1BoKPoR.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/1BoKPoR.jpg"> </a><a href="https://i.imgur.com/J4jPL8z.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/J4jPL8z.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Toast Toast Breakfast Store" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/uxoL2iB.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/uxoL2iB.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/%E5%90%90%E5%8F%B8%E5%90%90%E5%8F%B8%E6%97%A9%E9%A4%90%E5%B0%88%E8%B3%A3%E5%BA%97-134018606690448/" target="_blank">吐司吐司早餐專賣店</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Toast Toast Breakfast Store</p>
+                    <p class="restaurantSubTitle">——Chinese Cheese Omelet</p>
+                    <p class="restaurantSubTitle">——No. 348, Section 1, Jiankang Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——06:00~11:00, closed on SUN</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/61XsqeQCLRm" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/61XsqeQCLRm" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/002O2So.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/002O2So.jpg"> </a> <a href="https://i.imgur.com/MuXhqzv.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/MuXhqzv.jpg"> </a> <a href="https://i.imgur.com/yG52CPV.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/yG52CPV.jpg"> </a> <a href="https://i.imgur.com/a41fCtY.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/a41fCtY.jpg"> </a><a href="https://i.imgur.com/r9rP8ni.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/r9rP8ni.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+    </div>
     <!-- fb comment box -->
     <iframe class="embed-responsive-item" src="comment.html" frameborder="0" width="100%" height="500px"></iframe>
     <!-- shadow -->

@@ -26,12 +26,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
-    <!-- Add additional services that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
-    <!-- Initialize Firebase -->
-    <script src="js/firebaseInit.js"></script>
 </head>
 
 <body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
@@ -43,7 +37,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav" style="text-align: center; margin: auto;">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="dessert.html">Appetizer</a></li>
+                <li class="nav-item"><a class="nav-link" href="appetizer.html">Appetizer</a></li>
                 <li class="nav-item"><a class="nav-link" href="breakfast.html">Breakfast</a></li>
                 <li class="nav-item"><a class="nav-link" href="drink.html">Drink</a></li>
                 <li class="nav-item"><a class="nav-link" href="mainCourse.html">Main Course</a></li>
@@ -58,50 +52,521 @@
         <img src="https://i.imgur.com/Dy26TFU.png">
     </div>
     <!-- foodInfo -->
-    <div id="foodInfo" class="container-fluid"></div>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var userRef = firebase.database().ref('/food_list/dessert');
-        userRef.on('value', function(snapshot) {
-            data = snapshotToArray(snapshot);
-
-            //data 塞入 html
-            var demo = '';
-            for (var i = 0; i < data.length; i++) {
-                demo += '<div id="' + data[i].restaurant_english + '" class="infoBar"> <div class="row"> <div class="d-none d-lg-block col-lg-1"></div> <div class="infoPanel col-lg-3"><a href="' + data[i].image_main + '" target="_blank"> <img class="restaurantImg" src="' + data[i].image_main + '"> </a> </div> <div class="infoPanel col-lg-6"> <p class="restaurantTitle">';
-
-                if (data[i].official_website == null) {
-                    demo += data[i].restaurant;
-                } else {
-                    demo += '<a href="' + data[i].official_website + '" target="_blank">' + data[i].restaurant + '</a>';
-                }
-
-                demo += '</p> <br/> <p class="restaurantSubTitle">——' + data[i].restaurant_english + '</p> <p class="restaurantSubTitle">——' + data[i].word + '</p> <p class="restaurantSubTitle">——' + data[i].address + '</p> <p class="restaurantSubTitle">——' + data[i].opening_hour + '</p> </div> <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="' + data[i].google_map + '" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div> <div class="d-lg-none text-center" style="margin:auto;"> <a class="mapButton" href="' + data[i].google_map + '" target="_blank"> <p style="margin: 10px;">Google Map</p> </a> </div><div class="d-none d-lg-block col-lg-1"></div> </div> <div class="row"><div class="clearfix"></div> <div class="d-none d-lg-block col-lg-1"></div> <div class="infoBar-content col-lg-10"> <a href="' + data[i].image_1 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_1 + '"> </a> <a href="' + data[i].image_2 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_2 + '"> </a> <a href="' + data[i].image_3 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_3 + '"> </a> <a href="' + data[i].image_4 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_4 + '"> </a>'
-
-                if (data[i].image_5 == null) {
-                    demo += '';
-                } else {
-                    demo += '<a href="' + data[i].image_5 + '" target="_blank"> <img class="otherImg col-lg-2 col-5" src="' + data[i].image_5 + '"> </a>';
-                }
-
-                demo += '</div> <div class="d-none d-lg-block col-lg-1"></div> </div> </div>'
-            }
-
-            $("#foodInfo").html(demo);
-        });
-
-        //轉換 json object to json array
-        function snapshotToArray(snapshot) {
-            var returnArr = [];
-            snapshot.forEach(function(childSnapshot) {
-                var item = childSnapshot.val();
-                item.key = childSnapshot.key;
-                returnArr.push(item);
-            });
-            return returnArr;
-        };
-    });
-    </script>
+    <div id="foodInfo" class="container-fluid">
+        <div id="8 Bao Bing Shaved Ice" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/SKxd25S.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/SKxd25S.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://8bao.com.tw/" target="_blank">八寶彬圓仔惠</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——8 Bao Bing Shaved Ice</p>
+                    <p class="restaurantSubTitle">——Eight Treasure Shaved Ice</p>
+                    <p class="restaurantSubTitle">——No.99, Section 2, Guohua St, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——09:00~22:00, closed on MON</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/FW2o1VDLhM52" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/FW2o1VDLhM52" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/12oJq8c.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/12oJq8c.jpg"> </a> <a href="https://i.imgur.com/x3NpfL3.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/x3NpfL3.jpg"> </a> <a href="https://i.imgur.com/wkcpQPg.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/wkcpQPg.jpg"> </a> <a href="https://i.imgur.com/tlgHfgX.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/tlgHfgX.jpg"> </a><a href="https://i.imgur.com/uwoqELV.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/uwoqELV.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="A-Chuan Classic Tapioca Ice" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/FmEzFTE.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/FmEzFTE.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/TapiocaIce/" target="_blank">阿川古早味粉圓冰</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——A-Chuan Classic Tapioca Ice</p>
+                    <p class="restaurantSubTitle">——Ice</p>
+                    <p class="restaurantSubTitle">——No.82, Section 1, Hai'an Road, North District, Tainan City</p>
+                    <p class="restaurantSubTitle">——09:30~22:30</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/9fr89YQfU342" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/9fr89YQfU342" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/8aMVx8U.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/8aMVx8U.jpg"> </a> <a href="https://i.imgur.com/ZNt7Pjq.png" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/ZNt7Pjq.png"> </a> <a href="https://i.imgur.com/1M7zCyV.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/1M7zCyV.jpg"> </a> <a href="https://i.imgur.com/SF7yzDI.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/SF7yzDI.jpg"> </a><a href="https://i.imgur.com/jKFKLvz.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/jKFKLvz.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="De-Ji Traditional Tofu Pudding" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/UZuDxlX.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/UZuDxlX.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/%E5%BE%B7%E8%A8%98%E5%8F%A4%E6%97%A9%E5%91%B3%E6%B1%95%E9%A0%AD%E8%B1%86%E8%8A%B1-1056851494340265/" target="_blank">德記古早味手工汕頭豆花</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——De-Ji Traditional Tofu Pudding</p>
+                    <p class="restaurantSubTitle">——Tofu Pudding</p>
+                    <p class="restaurantSubTitle">——No.228, Chenggong Road, North District, Tainan City</p>
+                    <p class="restaurantSubTitle">——08:00~22:00</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/Ed6Hamrg1S12" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/Ed6Hamrg1S12" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/0XvdX8B.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/0XvdX8B.jpg"> </a> <a href="https://i.imgur.com/s8SM8MP.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/s8SM8MP.jpg"> </a> <a href="https://i.imgur.com/nzPcaax.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/nzPcaax.jpg"> </a> <a href="https://i.imgur.com/I3AKvlO.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/I3AKvlO.jpg"> </a><a href="https://i.imgur.com/HCVDuMF.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/HCVDuMF.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Fu-Ji-Ya Handmade Caramel Pudding" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/mizOlc2.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/mizOlc2.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="http://www.tainanfujiya.com/" target="_blank">福吉雅手工焦糖布丁</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Fu-Ji-Ya Handmade Caramel Pudding</p>
+                    <p class="restaurantSubTitle">——Caramel Pudding</p>
+                    <p class="restaurantSubTitle">——No.235, Nanmen Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——13:00~18:00; 13:00~17:00 on SAT &amp; SUN; closed on MON &amp; TUE</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/dGFHZZx892u" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/dGFHZZx892u" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/RcuUZq6.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/RcuUZq6.jpg"> </a> <a href="https://i.imgur.com/wvduvWS.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/wvduvWS.jpg"> </a> <a href="https://i.imgur.com/puRkLin.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/puRkLin.jpg"> </a> <a href="https://i.imgur.com/mWx7uHA.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/mWx7uHA.jpg"> </a><a href="https://i.imgur.com/322kjam.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/322kjam.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Fy-Ice Popsicle" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/dbB18Iw.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/dbB18Iw.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="http://www.fy-ice.com.tw/" target="_blank">台南芳苑冰棒</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Fy-Ice Popsicle</p>
+                    <p class="restaurantSubTitle">——Popsicle</p>
+                    <p class="restaurantSubTitle">——No.6, Kaishan Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——https://goo.gl/maps/TZi7WKuwsCQ2</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="undefined" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="undefined" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/g44iTZ1.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/g44iTZ1.jpg"> </a> <a href="https://i.imgur.com/g5fbTPB.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/g5fbTPB.jpg"> </a> <a href="https://i.imgur.com/M3fY0Ri.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/M3fY0Ri.jpg"> </a> <a href="https://i.imgur.com/n1MDppP.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/n1MDppP.jpg"> </a><a href="https://i.imgur.com/xu2fJKm.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/xu2fJKm.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Hometown Eight Treasure Ice" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/nMuRznB.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nMuRznB.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle">家鄉八寶冰</p>
+                    <br>
+                    <p class="restaurantSubTitle">——Hometown Eight Treasure Ice</p>
+                    <p class="restaurantSubTitle">——Fruit Ice, Eight Treasure Shaved Ice</p>
+                    <p class="restaurantSubTitle">——No.61, Section 4, Jinhua Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——14:00~00:00; 12:00~00:00 on SAT &amp; SUN; closed on WED</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/PmRFcWMVnKJ2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/PmRFcWMVnKJ2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/7y3jzD9.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/7y3jzD9.jpg"> </a> <a href="https://i.imgur.com/LGXMUHP.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/LGXMUHP.jpg"> </a> <a href="https://i.imgur.com/T20hSfw.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/T20hSfw.jpg"> </a> <a href="https://i.imgur.com/8uHvdWs.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/8uHvdWs.jpg"> </a><a href="https://i.imgur.com/IUYrEqS.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/IUYrEqS.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Huang, Huo-Mu Taiwanese Ice" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/oXtfwV7.jpg?1" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/oXtfwV7.jpg?1"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="http://jsh.vrworld.com.tw/" target="_blank">黃火木舊台味冰店</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Huang, Huo-Mu Taiwanese Ice</p>
+                    <p class="restaurantSubTitle">——Shaved Ice</p>
+                    <p class="restaurantSubTitle">——No.34, Section 3, Hai'an Road, North District, Tainan City</p>
+                    <p class="restaurantSubTitle">——12:00~23:00, closed on MON</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/s8pegbhgBYR2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/s8pegbhgBYR2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/AKnzvPQ.jpg?1" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/AKnzvPQ.jpg?1"> </a> <a href="https://i.imgur.com/BVowa06.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/BVowa06.jpg"> </a> <a href="https://i.imgur.com/wZEbcZc.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/wZEbcZc.jpg"> </a> <a href="https://i.imgur.com/7yvGUeb.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/7yvGUeb.jpg"> </a><a href="https://i.imgur.com/CZVV25N.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/CZVV25N.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Imodo Handmade Almond Tofu" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/UgGZq13.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/UgGZq13.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/imodo.dofu/" target="_blank">艾摩多手工杏仁豆腐</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Imodo Handmade Almond Tofu</p>
+                    <p class="restaurantSubTitle">——Almond Tofu Ice, Almond Tofu, Almond Tea</p>
+                    <p class="restaurantSubTitle">——No.26, Chikan East Street, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——11:00~21:00</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/B1bUppaqt7S2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/B1bUppaqt7S2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/8sPhulv.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/8sPhulv.jpg"> </a> <a href="https://i.imgur.com/o50HNwf.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/o50HNwf.jpg"> </a> <a href="https://i.imgur.com/Jtg9ifA.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Jtg9ifA.jpg"> </a> <a href="https://i.imgur.com/nqEFAw2.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/nqEFAw2.jpg"> </a><a href="https://i.imgur.com/SAxhMEC.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/SAxhMEC.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Jin Gui Tree Ice Cream" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/OUQXt3W.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/OUQXt3W.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/jinguitree2151830" target="_blank">金龜樹冰淇淋</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Jin Gui Tree Ice Cream</p>
+                    <p class="restaurantSubTitle">——Ice, Tofu Pudding</p>
+                    <p class="restaurantSubTitle">——No.185, Kaishan Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——10:00~21:30, closed on WED</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/SA64eaKpFr32" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/SA64eaKpFr32" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/etQPB54.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/etQPB54.jpg"> </a> <a href="https://i.imgur.com/85YVUcG.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/85YVUcG.jpg"> </a> <a href="https://i.imgur.com/G2Kq5Lu.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/G2Kq5Lu.jpg"> </a> <a href="https://i.imgur.com/LENcTGq.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/LENcTGq.jpg"> </a><a href="https://i.imgur.com/TNPAJpp.jpg?1" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/TNPAJpp.jpg?1"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Long Xing Ice Shop" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/vp4VUgh.png" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/vp4VUgh.png"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/Lxbpd" target="_blank">龍興冰品店</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Long Xing Ice Shop</p>
+                    <p class="restaurantSubTitle">——Berry Ice, Eight Treasure Shaved Ice</p>
+                    <p class="restaurantSubTitle">——No.39, Section 4, Jinhua Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——12:00~00:00, closed on WED</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/u5VpRADoLzv" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/u5VpRADoLzv" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/KVIKqLE.png" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/KVIKqLE.png"> </a> <a href="https://i.imgur.com/L4liz4F.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/L4liz4F.jpg"> </a> <a href="https://i.imgur.com/xvvzj0b.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/xvvzj0b.jpg"> </a> <a href="https://i.imgur.com/RC1HNEh.png" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/RC1HNEh.png"> </a><a href="https://i.imgur.com/9IXsdgu.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/9IXsdgu.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Qing Ji Fruit Shop" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/vzw9XFA.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/vzw9XFA.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/pages/%E6%B8%85%E5%90%89%E6%B0%B4%E6%9E%9C%E8%A1%8C/150544061682162" target="_blank">清吉水果</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Qing Ji Fruit Shop</p>
+                    <p class="restaurantSubTitle">——Fruit Ice, Papaya Juice</p>
+                    <p class="restaurantSubTitle">——No.294, Section 1, Fuqian Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——11:00~00:00</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/xtejr8zZAxB2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/xtejr8zZAxB2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/Oyc0OIj.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Oyc0OIj.jpg"> </a> <a href="https://i.imgur.com/oTrqyxv.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/oTrqyxv.jpg"> </a> <a href="https://i.imgur.com/4RvHyoX.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/4RvHyoX.jpg"> </a> <a href="https://i.imgur.com/gCHaCyq.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/gCHaCyq.jpg"> </a><a href="https://i.imgur.com/PYLITXp.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/PYLITXp.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Shang He Brown Sugar Tapioca" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/rZkFadd.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/rZkFadd.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/%E5%B0%9A%E7%A6%BE%E9%BB%91%E7%B3%96%E7%B2%89%E5%9C%93%E5%86%B0%E5%8F%B0%E5%8D%97%E6%B5%B7%E5%AE%89%E5%BA%97-190262277697347/" target="_blank">尚禾黑糖粉圓</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Shang He Brown Sugar Tapioca</p>
+                    <p class="restaurantSubTitle">——Brown Sugar Tapiocal Ball Ice</p>
+                    <p class="restaurantSubTitle">——No.30, Section 2, Hai'an Road, North District, Tainan City</p>
+                    <p class="restaurantSubTitle">——12:00~22:00; 12:00~23:00 on FRI &amp; SAT</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/RtjCa5aY3LA2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/RtjCa5aY3LA2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/Bh1A59j.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Bh1A59j.jpg"> </a> <a href="https://i.imgur.com/Y2EtCsz.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Y2EtCsz.jpg"> </a> <a href="https://i.imgur.com/Vs6yqzC.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Vs6yqzC.jpg"> </a> <a href="https://i.imgur.com/yXAvYEj.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/yXAvYEj.jpg"> </a><a href="https://i.imgur.com/0lyGz0z.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/0lyGz0z.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Sun Ice" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/nKcaL5b.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nKcaL5b.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="http://sunice.myweb.hinet.net/" target="_blank">太陽牌冰品</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Sun Ice</p>
+                    <p class="restaurantSubTitle">——Fruit Ice, Ice</p>
+                    <p class="restaurantSubTitle">——No.41, Section 1, Minquan Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——10:00~21:30</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/m1c3pQ1ndd12" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/m1c3pQ1ndd12" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/BBG6PMH.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/BBG6PMH.jpg"> </a> <a href="https://i.imgur.com/GlQcUoc.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/GlQcUoc.jpg"> </a> <a href="https://i.imgur.com/9a5H6UM.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/9a5H6UM.jpg"> </a> <a href="https://i.imgur.com/seDTZUk.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/seDTZUk.jpg"> </a><a href="https://i.imgur.com/CoA1Oqj.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/CoA1Oqj.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Tofu Flower" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/pIrDSvP.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/pIrDSvP.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/DouHuaDian/" target="_blank">豆腐花</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Tofu Flower</p>
+                    <p class="restaurantSubTitle">——Tofu pudding, The most delicious dessert ever in Taiwan</p>
+                    <p class="restaurantSubTitle">——No.100, Wufei Street, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——12:00~21:00, closed on SUN</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/wtM9tnXSmS12" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/wtM9tnXSmS12" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/q4V3ELF.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/q4V3ELF.jpg"> </a> <a href="https://i.imgur.com/Og46ewy.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Og46ewy.jpg"> </a> <a href="https://i.imgur.com/qX09Fy4.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/qX09Fy4.jpg"> </a> <a href="https://i.imgur.com/z9xsrbq.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/z9xsrbq.jpg"> </a><a href="https://i.imgur.com/p4Ier1Y.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/p4Ier1Y.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Wufei Temple Tofu Pudding" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/nRZFi1D.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nRZFi1D.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="http://memory206.com/" target="_blank">台南五妃廟豆腐冰</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Wufei Temple Tofu Pudding</p>
+                    <p class="restaurantSubTitle">——Tofu pudding, Ice</p>
+                    <p class="restaurantSubTitle">——No.206, Wufei Street, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——10:30~22:00</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/a9Vtf89FNkP2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/a9Vtf89FNkP2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/qjn7DDL.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/qjn7DDL.jpg"> </a> <a href="https://i.imgur.com/TftC85K.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/TftC85K.jpg"> </a> <a href="https://i.imgur.com/78QCYVp.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/78QCYVp.jpg"> </a> <a href="https://i.imgur.com/M77uBfw.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/M77uBfw.jpg"> </a><a href="https://i.imgur.com/OjI9R9Q.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/OjI9R9Q.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Xie's Eight Treasure Shaved Ice" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/MACyKaW.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/MACyKaW.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle">謝家八寶冰</p>
+                    <br>
+                    <p class="restaurantSubTitle">——Xie's Eight Treasure Shaved Ice</p>
+                    <p class="restaurantSubTitle">——Eight Treasure Shaved Ice</p>
+                    <p class="restaurantSubTitle">——No.238, Section 2, Minsheng Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——19:00~00:00</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/nbtfjS7RxgT2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/nbtfjS7RxgT2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/eCxSDcy.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/eCxSDcy.jpg"> </a> <a href="https://i.imgur.com/KMHOX0Q.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/KMHOX0Q.jpg"> </a> <a href="https://i.imgur.com/wy78ypc.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/wy78ypc.jpg"> </a> <a href="https://i.imgur.com/PKqa3E7.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/PKqa3E7.jpg"> </a><a href="https://i.imgur.com/9UAq6Ad.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/9UAq6Ad.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Xiu-An Bean Jelly" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/ZH6XXYS.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/ZH6XXYS.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/XiuAnDoHua/" target="_blank">修安扁擔豆花</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Xiu-An Bean Jelly</p>
+                    <p class="restaurantSubTitle">——Tofu pudding</p>
+                    <p class="restaurantSubTitle">——No.157, Section 3, Guohua St, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——08:00~22:00</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/h486C6D9uvN2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/h486C6D9uvN2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/EYy3oiR.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/EYy3oiR.jpg"> </a> <a href="https://i.imgur.com/9Hgw1EC.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/9Hgw1EC.jpg"> </a> <a href="https://i.imgur.com/lxYPaEl.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/lxYPaEl.jpg"> </a> <a href="https://i.imgur.com/ofelFSZ.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/ofelFSZ.jpg"> </a><a href="https://i.imgur.com/Q3Gn2TH.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Q3Gn2TH.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Yi-Ping-Tang Handmade Almond Panna Cotta" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/Eq4xLs6.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/Eq4xLs6.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/epingong/" target="_blank">一品塘手工杏仁奶酪</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Yi-Ping-Tang Handmade Almond Panna Cotta</p>
+                    <p class="restaurantSubTitle">——Almond Panna Cotta</p>
+                    <p class="restaurantSubTitle">——No.193, Section 2, Hai'an Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——10:30~23:30</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/qtJaQRZMw182" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/qtJaQRZMw182" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/sTrhPJ1.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/sTrhPJ1.jpg"> </a> <a href="https://i.imgur.com/ZiAsBul.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/ZiAsBul.jpg"> </a> <a href="https://i.imgur.com/Q0MRLxC.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Q0MRLxC.jpg"> </a> <a href="https://i.imgur.com/hkUGjkA.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/hkUGjkA.jpg"> </a><a href="https://i.imgur.com/pUo19QQ.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/pUo19QQ.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+        <div id="Zhuangzi Peanut Kernel Soup" class="infoBar">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/o0KJWvx.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/o0KJWvx.jpg"> </a> </div>
+                <div class="infoPanel col-lg-6">
+                    <p class="restaurantTitle"><a href="https://www.facebook.com/ChuangTzuTainan/" target="_blank">莊子土豆仁湯</a></p>
+                    <br>
+                    <p class="restaurantSubTitle">——Zhuangzi Peanut Kernel Soup</p>
+                    <p class="restaurantSubTitle">——Peanut Soup</p>
+                    <p class="restaurantSubTitle">——No.86, Section 2, Minsheng Road, West Central District, Tainan City</p>
+                    <p class="restaurantSubTitle">——14:00~22:00, closed on MON</p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1 text-center" style="margin:auto;"> <a class="mapButton" href="https://goo.gl/maps/5cQKPRcNkER2" target="_blank"> <img class="mapImg" src="img/MapIcon.png"> </a> </div>
+                <div class="d-lg-none text-center" style="margin:auto;">
+                    <a class="mapButton" href="https://goo.gl/maps/5cQKPRcNkER2" target="_blank">
+                        <p style="margin: 10px;">Google Map</p>
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="infoBar-content col-lg-10"> <a href="https://i.imgur.com/kWEGm0d.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/kWEGm0d.jpg"> </a> <a href="https://i.imgur.com/Vua7k2I.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/Vua7k2I.jpg"> </a> <a href="https://i.imgur.com/s2R0N0F.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/s2R0N0F.jpg"> </a> <a href="https://i.imgur.com/rXmnF8x.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/rXmnF8x.jpg"> </a><a href="https://i.imgur.com/qBzR5y2.jpg" target="_blank"> <img class="otherImg col-lg-2 col-5" src="https://i.imgur.com/qBzR5y2.jpg"> </a></div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+            </div>
+        </div>
+    </div>
     <!-- fb comment box -->
     <iframe class="embed-responsive-item" src="comment.html" frameborder="0" width="100%" height="500px"></iframe>
     <!-- shadow -->
