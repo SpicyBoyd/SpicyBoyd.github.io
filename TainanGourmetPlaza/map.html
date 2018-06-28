@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Map</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="吳政峰, 楊博宇, 涂忻芸">
+    <meta name="keywords" content="Tainan, Food, Gourmet, Appetizer, Breakfast, Dessert, Drinks, Main Course, Secret Menu, Soup, Map">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_TW">
     <meta property="og:site_name" content="Tainan Gourmet Plaza">
-    <meta property="og:title" content="Tainan Gourmet">
+    <meta property="og:title" content="Map">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="The most gourmet food in Taiwan">
+    <meta property="og:description" content="Tainan Gourmet Plaza will show you wide varieties of food in Tainan. From breakfast to dinner, the meal to snack, you can spend the whole day enjoying gourmet food while strolling around this beautiful city.">
     <meta property="og:image" content="https://i.imgur.com/Dy26TFU.png">
-    <meta property="og:url" content="https://spicyboyd.github.io/TainanGourmetPlaza">
-    <meta property="fb:app_id" content="1805550089560971" />
+    <meta property="og:url" content="https://spicyboyd.github.io/TainanGourmetPlaza/map.html">
+    <meta property="fb:app_id" content="1805550089560971">
+    <meta property="og:country-name" content="Taiwan" />
+    <meta property="og:locality" content="Tainan" />
     <link rel="shortcut icon" href="img/Gourmet.ico" />
     <link rel="bookmark" href="img/Gourmet.ico" />
     <link rel="stylesheet" type="text/css" href="stylesheet/page.css">
@@ -32,12 +36,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <script type="text/javascript" src="js/backTopBtn.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet/backTopBtn.css">
+    <!-- img Lazyload -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="js/lazyload.js"></script>
 </head>
 
 <body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
     <!-- Logo -->
     <div id="logo">
-        <img src="https://i.imgur.com/Dy26TFU.png">
+        <img class="lazyload" data-original="https://i.imgur.com/Dy26TFU.png">
     </div>
     <hr class="hr_thickness">
     <!-- Navigation Bar -->
@@ -68,7 +75,7 @@
         <div class="d-none d-lg-block col-lg-6"></div>
     </div>
     <!-- 美食地圖-->
-    <p><img src="https://i.imgur.com/MyY3RRs.png" usemap="#map_1"></p>
+    <p><img class="lazyload" data-original="https://i.imgur.com/MyY3RRs.png" usemap="#map_1"></p>
     <map name="map_1">
         <!-- coords=X1,Y1,X2,Y2(左上右下座標) -->
         <!-- Appetizer -->
@@ -200,7 +207,7 @@
     <iframe class="embed-responsive-item" src="comment.html" frameborder="0" width="100%" height="500px"></iframe>
     <!-- shadow -->
     <div class="row">
-        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="https://i.imgur.com/qJSCtRh.png">
+        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lazyload" data-original="https://i.imgur.com/qJSCtRh.png">
     </div>
     <!-- Back To Top btn -->
     <a id="backTopBtn" class="btn backTopBtn"><i class="fas fa-chevron-circle-up fa-5x btn_color"></i></a>

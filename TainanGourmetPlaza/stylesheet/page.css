@@ -51,11 +51,15 @@
     display: none;
     text-align: center;
     vertical-align: middle;
-    margin-bottom: 5vh;
+    margin: 2% auto;
 }
 
 .infoBar:hover .infoBar-content {
-    display: block;
+    display: flex;
+}
+
+.infoBar-content a {
+    margin: auto;
 }
 
 .restaurantImg {
@@ -70,11 +74,12 @@
 
 .otherImg {
     text-align: center;
-    margin-top: 2%;
-    height: 80%;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+    margin: auto;
+    height: 120px;
+    width: initial;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .restaurantTitle {
@@ -138,13 +143,33 @@
         color: #AAAAAA;
     }
 
+    .infoBar-content {
+        display: none;
+        text-align: center;
+        vertical-align: middle;
+        margin: 2% auto;
+    }
+
+    .infoBar:hover .infoBar-content {
+        display: block;
+    }
+
+    .infoBar-content a {
+        margin: auto;
+    }
+
     .otherImg {
         text-align: center;
-        margin-top: 2%;
-        height: initial;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        border-radius: 30px;
+        margin: auto;
+        height: 100px;
+        width: initial;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    .rwd_btn{
+        margin: 10px 15px;
     }
 }
 

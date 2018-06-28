@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Tainan Gourmet Plaza</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="吳政峰, 楊博宇, 涂忻芸">
+    <meta name="keywords" content="Tainan, Food, Gourmet, Appetizer, Breakfast, Dessert, Drinks, Main Course, Secret Menu, Soup, Map">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_TW">
     <meta property="og:site_name" content="Tainan Gourmet Plaza">
-    <meta property="og:title" content="Tainan Gourmet">
+    <meta property="og:title" content="Home">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="The most gourmet food in Taiwan">
+    <meta property="og:description" content="Tainan Gourmet Plaza will show you wide varieties of food in Tainan. From breakfast to dinner, the meal to snack, you can spend the whole day enjoying gourmet food while strolling around this beautiful city.">
     <meta property="og:image" content="https://i.imgur.com/Dy26TFU.png">
     <meta property="og:url" content="https://spicyboyd.github.io/TainanGourmetPlaza">
     <meta property="fb:app_id" content="1805550089560971" />
+    <meta property="og:country-name" content="Taiwan"/>
+    <meta property="og:locality" content="Tainan"/>
     <link rel="shortcut icon" href="img/Gourmet.ico" />
     <link rel="bookmark" href="img/Gourmet.ico" />
     <link rel="stylesheet" type="text/css" href="stylesheet/home.css">
@@ -30,15 +34,18 @@
     <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
     <!-- Back to Top btn -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <script type="text/javascript" src="js/backTopBtn.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet/backTopBtn.css">
+    <!-- img Lazyload -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="js/lazyload.js"></script>
 </head>
 
 <body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
     <!-- Logo -->
     <div id="logo">
-        <img src="https://i.imgur.com/Dy26TFU.png">
+        <img class="lazyload" data-original="https://i.imgur.com/Dy26TFU.png">
     </div>
     <hr class="hr_thickness">
     <div class="d-none d-lg-block" style="margin-bottom: 60px;"></div>
@@ -68,9 +75,9 @@
     <div class="d-none d-lg-block">
         <div class="container-fluid">
             <div class="row" style="display: flex; padding: 5px;">
-                <img class="homeImg col-lg-4" src="https://i.imgur.com/cBQQtkI.jpg">
-                <img class="homeImg col-lg-4" src="https://i.imgur.com/NjWUzFH.jpg">
-                <img class="homeImg col-lg-4" src="https://i.imgur.com/qoOznm3.jpg">
+                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/cBQQtkI.jpg">
+                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/NjWUzFH.jpg">
+                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/qoOznm3.jpg">
             </div>
         </div>
     </div>
@@ -83,13 +90,13 @@
             </ul>
             <div class="carousel-inner">
                 <div class="carousel-item active row">
-                    <img class="rounded col-md-12" src="https://i.imgur.com/cBQQtkI.jpg">
+                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/cBQQtkI.jpg">
                 </div>
                 <div class="carousel-item row">
-                    <img class="rounded col-md-12" src="https://i.imgur.com/NjWUzFH.jpg">
+                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/NjWUzFH.jpg">
                 </div>
                 <div class="carousel-item row">
-                    <img class="rounded col-md-12" src="https://i.imgur.com/qoOznm3.jpg">
+                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/qoOznm3.jpg">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#photo" data-slide="prev">
@@ -116,9 +123,9 @@
     </div>
     <!-- shadow -->
     <div class="row">
-        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="https://i.imgur.com/qJSCtRh.png">
+        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lazyload" data-original="https://i.imgur.com/qJSCtRh.png">
     </div>
-    <!-- Back To Top btn -->    
+    <!-- Back To Top btn -->
     <a id="backTopBtn" class="btn backTopBtn"><i class="fas fa-chevron-circle-up fa-5x btn_color"></i></a>
     <!-- footer -->
 </body>
