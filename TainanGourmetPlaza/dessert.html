@@ -26,38 +26,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- 新增字型 -->
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+    <!-- Back to Top btn -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script type="text/javascript" src="js/backTopBtn.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet/backTopBtn.css">
 </head>
 
 <body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>Menu
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav" style="text-align: center; margin: auto;">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="appetizer.html">Appetizer</a></li>
-                <li class="nav-item"><a class="nav-link" href="breakfast.html">Breakfast</a></li>
-                <li class="nav-item"><a class="nav-link" href="drink.html">Drink</a></li>
-                <li class="nav-item"><a class="nav-link" href="mainCourse.html">Main Course</a></li>
-                <li class="nav-item"><a class="nav-link" href="secretMenu.html">Secret Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="soup.html">Soup</a></li>
-                <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
-            </ul>
-        </div>
-    </nav>
     <!-- Logo -->
     <div id="logo">
         <img src="https://i.imgur.com/Dy26TFU.png">
+    </div>
+    <hr class="hr_thickness">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="margin: auto;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav" style="text-align: center; margin: auto;">
+                <li class="nav-item"><a class="nav-link" href="index.html"><img class="image_btn unhover" src="img/btn-1.png"><img class="image_btn hover" src="img/btnf-1.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="appetizer.html"><img class="image_btn unhover" src="img/btn-3.png"><img class="image_btn hover" src="img/btnf-3.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="breakfast.html"><img class="image_btn unhover" src="img/btn-2.png"><img class="image_btn hover" src="img/btnf-2.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><img class="image_btn" src="img/btnf-7.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="drinks.html"><img class="image_btn unhover" src="img/btn-6.png"><img class="image_btn hover" src="img/btnf-6.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="mainCourse.html"><img class="image_btn unhover" src="img/btn-5.png"><img class="image_btn hover" src="img/btnf-5.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="secretMenu.html"><img class="image_btn unhover" src="img/btn-8.png"><img class="image_btn hover" src="img/btnf-8.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="soup.html"><img class="image_btn unhover" src="img/btn-4.png"><img class="image_btn hover" src="img/btnf-4.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="map.html"><img class="image_btn unhover" src="img/button-9.png"><img class="image_btn hover" src="img/button_focus-9.png"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- text -->
+    <div class="row">
+        <div class="d-none d-lg-block col-lg-1"></div>
+        <div class="col-lg-5 col-12">
+            <h1 class="title_text display-4" style="color: #edb2bb;"><u class="d-none d-lg-block">DESSERT</u><u class="d-lg-none title_text_center">DESSERT</u></h1>
+        </div>
+        <div class="d-none d-lg-block col-lg-6"></div>
     </div>
     <!-- foodInfo -->
     <div id="foodInfo" class="container-fluid">
         <div id="8 Bao Bing Shaved Ice" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/SKxd25S.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/SKxd25S.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/SKxd25S.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/SKxd25S.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://8bao.com.tw/" target="_blank">八寶彬圓仔惠</a></p>
                     <br>
                     <p class="restaurantSubTitle">——8 Bao Bing Shaved Ice</p>
@@ -83,8 +99,8 @@
         <div id="A-Chuan Classic Tapioca Ice" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/FmEzFTE.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/FmEzFTE.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/FmEzFTE.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/FmEzFTE.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/TapiocaIce/" target="_blank">阿川古早味粉圓冰</a></p>
                     <br>
                     <p class="restaurantSubTitle">——A-Chuan Classic Tapioca Ice</p>
@@ -110,8 +126,8 @@
         <div id="De-Ji Traditional Tofu Pudding" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/UZuDxlX.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/UZuDxlX.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/UZuDxlX.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/UZuDxlX.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/%E5%BE%B7%E8%A8%98%E5%8F%A4%E6%97%A9%E5%91%B3%E6%B1%95%E9%A0%AD%E8%B1%86%E8%8A%B1-1056851494340265/" target="_blank">德記古早味手工汕頭豆花</a></p>
                     <br>
                     <p class="restaurantSubTitle">——De-Ji Traditional Tofu Pudding</p>
@@ -137,8 +153,8 @@
         <div id="Fu-Ji-Ya Handmade Caramel Pudding" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/mizOlc2.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/mizOlc2.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/mizOlc2.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/mizOlc2.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="http://www.tainanfujiya.com/" target="_blank">福吉雅手工焦糖布丁</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Fu-Ji-Ya Handmade Caramel Pudding</p>
@@ -164,8 +180,8 @@
         <div id="Fy-Ice Popsicle" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/dbB18Iw.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/dbB18Iw.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/dbB18Iw.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/dbB18Iw.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="http://www.fy-ice.com.tw/" target="_blank">台南芳苑冰棒</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Fy-Ice Popsicle</p>
@@ -191,8 +207,8 @@
         <div id="Hometown Eight Treasure Ice" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/nMuRznB.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nMuRznB.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/nMuRznB.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nMuRznB.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle">家鄉八寶冰</p>
                     <br>
                     <p class="restaurantSubTitle">——Hometown Eight Treasure Ice</p>
@@ -218,8 +234,8 @@
         <div id="Huang, Huo-Mu Taiwanese Ice" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/oXtfwV7.jpg?1" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/oXtfwV7.jpg?1"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/oXtfwV7.jpg?1" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/oXtfwV7.jpg?1"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="http://jsh.vrworld.com.tw/" target="_blank">黃火木舊台味冰店</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Huang, Huo-Mu Taiwanese Ice</p>
@@ -245,8 +261,8 @@
         <div id="Imodo Handmade Almond Tofu" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/UgGZq13.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/UgGZq13.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/UgGZq13.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/UgGZq13.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/imodo.dofu/" target="_blank">艾摩多手工杏仁豆腐</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Imodo Handmade Almond Tofu</p>
@@ -272,8 +288,8 @@
         <div id="Jin Gui Tree Ice Cream" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/OUQXt3W.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/OUQXt3W.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/OUQXt3W.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/OUQXt3W.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/jinguitree2151830" target="_blank">金龜樹冰淇淋</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Jin Gui Tree Ice Cream</p>
@@ -299,8 +315,8 @@
         <div id="Long Xing Ice Shop" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/vp4VUgh.png" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/vp4VUgh.png"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/vp4VUgh.png" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/vp4VUgh.png"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/Lxbpd" target="_blank">龍興冰品店</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Long Xing Ice Shop</p>
@@ -326,8 +342,8 @@
         <div id="Qing Ji Fruit Shop" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/vzw9XFA.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/vzw9XFA.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/vzw9XFA.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/vzw9XFA.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/pages/%E6%B8%85%E5%90%89%E6%B0%B4%E6%9E%9C%E8%A1%8C/150544061682162" target="_blank">清吉水果</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Qing Ji Fruit Shop</p>
@@ -353,8 +369,8 @@
         <div id="Shang He Brown Sugar Tapioca" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/rZkFadd.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/rZkFadd.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/rZkFadd.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/rZkFadd.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/%E5%B0%9A%E7%A6%BE%E9%BB%91%E7%B3%96%E7%B2%89%E5%9C%93%E5%86%B0%E5%8F%B0%E5%8D%97%E6%B5%B7%E5%AE%89%E5%BA%97-190262277697347/" target="_blank">尚禾黑糖粉圓</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Shang He Brown Sugar Tapioca</p>
@@ -380,8 +396,8 @@
         <div id="Sun Ice" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/nKcaL5b.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nKcaL5b.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/nKcaL5b.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nKcaL5b.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="http://sunice.myweb.hinet.net/" target="_blank">太陽牌冰品</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Sun Ice</p>
@@ -407,8 +423,8 @@
         <div id="Tofu Flower" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/pIrDSvP.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/pIrDSvP.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/pIrDSvP.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/pIrDSvP.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/DouHuaDian/" target="_blank">豆腐花</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Tofu Flower</p>
@@ -434,8 +450,8 @@
         <div id="Wufei Temple Tofu Pudding" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/nRZFi1D.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nRZFi1D.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/nRZFi1D.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/nRZFi1D.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="http://memory206.com/" target="_blank">台南五妃廟豆腐冰</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Wufei Temple Tofu Pudding</p>
@@ -461,8 +477,8 @@
         <div id="Xie's Eight Treasure Shaved Ice" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/MACyKaW.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/MACyKaW.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/MACyKaW.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/MACyKaW.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle">謝家八寶冰</p>
                     <br>
                     <p class="restaurantSubTitle">——Xie's Eight Treasure Shaved Ice</p>
@@ -488,8 +504,8 @@
         <div id="Xiu-An Bean Jelly" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/ZH6XXYS.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/ZH6XXYS.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/ZH6XXYS.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/ZH6XXYS.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/XiuAnDoHua/" target="_blank">修安扁擔豆花</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Xiu-An Bean Jelly</p>
@@ -515,8 +531,8 @@
         <div id="Yi-Ping-Tang Handmade Almond Panna Cotta" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/Eq4xLs6.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/Eq4xLs6.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/Eq4xLs6.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/Eq4xLs6.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/epingong/" target="_blank">一品塘手工杏仁奶酪</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Yi-Ping-Tang Handmade Almond Panna Cotta</p>
@@ -542,8 +558,8 @@
         <div id="Zhuangzi Peanut Kernel Soup" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/o0KJWvx.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/o0KJWvx.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_dessert col-lg-3"><a href="https://i.imgur.com/o0KJWvx.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/o0KJWvx.jpg"> </a> </div>
+                <div class="infoPanel_dessert col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/ChuangTzuTainan/" target="_blank">莊子土豆仁湯</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Zhuangzi Peanut Kernel Soup</p>
@@ -571,9 +587,10 @@
     <iframe class="embed-responsive-item" src="comment.html" frameborder="0" width="100%" height="500px"></iframe>
     <!-- shadow -->
     <div class="row">
-        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="https://i.imgur.com/Vr8f33T.png">
-        <div class="clearfix"></div>
+        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="https://i.imgur.com/A8WB2Qd.png">
     </div>
+    <!-- Back To Top btn -->
+    <a id="backTopBtn" class="btn backTopBtn"><i class="fas fa-chevron-circle-up fa-5x btn_color"></i></a>
     <!-- footer -->
 </body>
 

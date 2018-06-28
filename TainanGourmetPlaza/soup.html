@@ -26,38 +26,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- 新增字型 -->
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+    <!-- Back to Top btn -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script type="text/javascript" src="js/backTopBtn.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet/backTopBtn.css">
 </head>
 
 <body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>Menu
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav" style="text-align: center; margin: auto;">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="appetizer.html">Appetizer</a></li>
-                <li class="nav-item"><a class="nav-link" href="breakfast.html">Breakfast</a></li>
-                <li class="nav-item"><a class="nav-link" href="dessert.html">Dessert</a></li>
-                <li class="nav-item"><a class="nav-link" href="drink.html">Drink</a></li>
-                <li class="nav-item"><a class="nav-link" href="mainCourse.html">Main Course</a></li>
-                <li class="nav-item"><a class="nav-link" href="secretMenu.html">Secret Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
-            </ul>
-        </div>
-    </nav>
     <!-- Logo -->
     <div id="logo">
         <img src="https://i.imgur.com/Dy26TFU.png">
+    </div>
+    <hr class="hr_thickness">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="margin: auto;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav" style="text-align: center; margin: auto;">
+                <li class="nav-item"><a class="nav-link" href="index.html"><img class="image_btn unhover" src="img/btn-1.png"><img class="image_btn hover" src="img/btnf-1.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="appetizer.html"><img class="image_btn unhover" src="img/btn-3.png"><img class="image_btn hover" src="img/btnf-3.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="breakfast.html"><img class="image_btn unhover" src="img/btn-2.png"><img class="image_btn hover" src="img/btnf-2.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="dessert.html"><img class="image_btn unhover" src="img/btn-7.png"><img class="image_btn hover" src="img/btnf-7.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="drinks.html"><img class="image_btn unhover" src="img/btn-6.png"><img class="image_btn hover" src="img/btnf-6.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="mainCourse.html"><img class="image_btn unhover" src="img/btn-5.png"><img class="image_btn hover" src="img/btnf-5.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="secretMenu.html"><img class="image_btn unhover" src="img/btn-8.png"><img class="image_btn hover" src="img/btnf-8.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><img class="image_btn" src="img/btnf-4.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="map.html"><img class="image_btn unhover" src="img/button-9.png"><img class="image_btn hover" src="img/button_focus-9.png"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- text -->
+    <div class="row">
+        <div class="d-none d-lg-block col-lg-1"></div>
+        <div class="col-lg-5 col-12">
+            <h1 class="title_text display-4" style="color: #f9cf99;"><u class="d-none d-lg-block">SOUP</u><u class="d-lg-none title_text_center">SOUP</u></h1>
+        </div>
+        <div class="d-none d-lg-block col-lg-6"></div>
     </div>
     <!-- foodInfo -->
     <div id="foodInfo" class="container-fluid">
         <div id="A-Hua Pig Blood Soup Stand" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/vc6dQnS.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/vc6dQnS.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/vc6dQnS.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/vc6dQnS.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle">阿華豬血湯攤</p>
                     <br>
                     <p class="restaurantSubTitle">——A-Hua Pig Blood Soup Stand</p>
@@ -83,8 +99,8 @@
         <div id="Fong's Milkfish Thick Soup" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/AsypenS.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/AsypenS.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/AsypenS.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/AsypenS.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/AFengTN/" target="_blank">阿鳳浮水虱目魚羹</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Fong's Milkfish Thick Soup</p>
@@ -110,8 +126,8 @@
         <div id="Guang's Milkfish Ball" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/e0bc6bb.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/e0bc6bb.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/e0bc6bb.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/e0bc6bb.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/pages/%E5%BB%A3%E4%BB%94%E8%99%B1%E7%9B%AE%E9%AD%9A%E4%B8%B8/195098687171532" target="_blank">廣仔虱目魚丸</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Guang's Milkfish Ball</p>
@@ -137,8 +153,8 @@
         <div id="Household Soup" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/EWNosbN.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/EWNosbN.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/EWNosbN.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/EWNosbN.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/maisondelasoupe/" target="_blank">湯食家</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Household Soup</p>
@@ -164,8 +180,8 @@
         <div id="Lin's Fish Skin" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/DuS3rDx.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/DuS3rDx.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/DuS3rDx.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/DuS3rDx.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle">林家魚皮</p>
                     <br>
                     <p class="restaurantSubTitle">——Lin's Fish Skin</p>
@@ -191,8 +207,8 @@
         <div id="Shi-Jing-Jou Beef Soup" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/ynQDrYT.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/ynQDrYT.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/ynQDrYT.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/ynQDrYT.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/pages/%E6%B0%91%E6%97%8F%E8%B7%AF%E7%9F%B3%E7%B2%BE%E8%87%BC%E7%89%9B%E8%82%89%E6%B9%AF/152748568117495" target="_blank">石精臼牛肉湯</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Shi-Jing-Jou Beef Soup</p>
@@ -218,8 +234,8 @@
         <div id="Third Generation Milkfish Ball" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/pz3izat.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/pz3izat.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/pz3izat.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/pz3izat.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle"><a href="http://www.d3d.com.tw/" target="_blank">第三代虱目魚丸</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Third Generation Milkfish Ball</p>
@@ -245,8 +261,8 @@
         <div id="Xi-Luo Temple Beef Soup" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/k7PahKP.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/k7PahKP.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/k7PahKP.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/k7PahKP.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/%E8%A5%BF%E7%BE%85%E6%AE%BF%E7%89%9B%E8%82%89%E6%B9%AF-115362721955138/" target="_blank">西羅殿牛肉湯</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Xi-Luo Temple Beef Soup</p>
@@ -272,8 +288,8 @@
         <div id="Yeh's Squid Rice Vermicelli Soup" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/reOW8Bm.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/reOW8Bm.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/reOW8Bm.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/reOW8Bm.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/Yehjia142" target="_blank">葉家小卷米粉</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Yeh's Squid Rice Vermicelli Soup</p>
@@ -299,8 +315,8 @@
         <div id="Yong-Ji Milkfish Ball" class="infoBar">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-1"></div>
-                <div class="infoPanel col-lg-3"><a href="https://i.imgur.com/sxcTKOD.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/sxcTKOD.jpg"> </a> </div>
-                <div class="infoPanel col-lg-6">
+                <div class="infoPanel_soup col-lg-3"><a href="https://i.imgur.com/sxcTKOD.jpg" target="_blank"> <img class="restaurantImg" src="https://i.imgur.com/sxcTKOD.jpg"> </a> </div>
+                <div class="infoPanel_soup col-lg-6">
                     <p class="restaurantTitle"><a href="https://www.facebook.com/pages/%E6%B0%B8%E8%A8%98%E8%99%B1%E7%9B%AE%E9%AD%9A%E4%B8%B8/121286537944616" target="_blank">永記虱目魚丸</a></p>
                     <br>
                     <p class="restaurantSubTitle">——Yong-Ji Milkfish Ball</p>
@@ -328,9 +344,10 @@
     <iframe class="embed-responsive-item" src="comment.html" frameborder="0" width="100%" height="500px"></iframe>
     <!-- shadow -->
     <div class="row">
-        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="https://i.imgur.com/Vr8f33T.png">
-        <div class="clearfix"></div>
+        <img id="shadow" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="https://i.imgur.com/z5oj4eH.png">
     </div>
+    <!-- Back To Top btn -->
+    <a id="backTopBtn" class="btn backTopBtn"><i class="fas fa-chevron-circle-up fa-5x btn_color"></i></a>
     <!-- footer -->
 </body>
 

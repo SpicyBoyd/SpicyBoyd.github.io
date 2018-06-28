@@ -1,0 +1,16 @@
+@media screen and (max-width:992px) {
+    .fa-5x {
+        font-size: 3em !important;
+    }
+}
+
+.backTopBtn .btn_color{
+	color: #bdbdbd;
+    border-radius: 100px;
+}
+
+.backTopBtn{
+	position: fixed;
+    bottom: 2em;
+    right: 10px;
+}

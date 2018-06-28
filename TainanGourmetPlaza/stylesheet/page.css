@@ -5,10 +5,46 @@
     margin-bottom: 5vh;
 }
 
-.infoPanel {
+.infoPanel_appetizer {
     text-align: center;
     vertical-align: middle;
-    box-shadow: 0px 3px grey;
+    box-shadow: 0px 3px #76c39f;
+}
+
+.infoPanel_breakfast {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #fbf5a8;
+}
+
+.infoPanel_dessert {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #edb2bb;
+}
+
+.infoPanel_drinks {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #60b9e9;
+}
+
+.infoPanel_mainCourse {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #afa3cf;
+}
+
+.infoPanel_secretMenu {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #003a70;
+}
+
+.infoPanel_soup {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #f9cf99;
 }
 
 .infoBar-content {
@@ -103,11 +139,45 @@
     }
 
     .otherImg {
-    text-align: center;
-    margin-top: 2%;
-    height: initial;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+        text-align: center;
+        margin-top: 2%;
+        height: initial;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+    }
 }
+
+.image_btn {
+    height: 30px;
+}
+
+.hover {
+    display: none;
+}
+
+a:hover .unhover {
+    display: none;
+}
+
+a:hover .hover {
+    display: initial;
+}
+
+.hr_thickness {
+    color: #eae5c8;
+    height: 2px;
+    border: none;
+    background: #eae5c8;
+}
+
+.title_text {
+    font-family: Alegreya;
+    margin: auto;
+    text-align: left;
+}
+
+.title_text_center {
+    text-align: center;
+    display: block;
 }
