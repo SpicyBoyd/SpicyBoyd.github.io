@@ -17,28 +17,29 @@
     <meta property="og:image" content="https://i.imgur.com/Dy26TFU.png">
     <meta property="og:url" content="https://spicyboyd.github.io/TainanGourmetPlaza">
     <meta property="fb:app_id" content="1805550089560971" />
-    <meta property="og:country-name" content="Taiwan" />
-    <meta property="og:locality" content="Tainan" />
+    <meta property="og:country-name" content="Taiwan"/>
+    <meta property="og:locality" content="Tainan"/>
     <link rel="shortcut icon" href="img/Gourmet.ico" />
     <link rel="bookmark" href="img/Gourmet.ico" />
     <link rel="stylesheet" type="text/css" href="stylesheet/home.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- 新增2種字型 -->
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <!-- Back to Top btn -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script type="text/javascript" src="js/backTopBtn.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet/backTopBtn.css">
     <!-- img Lazyload -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        $("img.lazyload").lazyload({
-            effect: "fadeIn"
-        });
-    });
-    </script>
+    <script type="text/javascript" src="js/lazyload.js"></script>
 </head>
 
 <body style="background-repeat:no-repeat; background-size: cover; background-position:center;">
@@ -74,9 +75,9 @@
     <div class="d-none d-lg-block">
         <div class="container-fluid">
             <div class="row" style="display: flex; padding: 5px;">
-                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/2zAMXSD.jpg">
-                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/ZC0uOXz.jpg">
-                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/AyORS8R.jpg">
+                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/cBQQtkI.jpg">
+                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/NjWUzFH.jpg">
+                <img class="homeImg col-lg-4 lazyload" data-original="https://i.imgur.com/qoOznm3.jpg">
             </div>
         </div>
     </div>
@@ -89,13 +90,13 @@
             </ul>
             <div class="carousel-inner">
                 <div class="carousel-item active row">
-                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/2zAMXSD.jpg">
+                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/cBQQtkI.jpg">
                 </div>
                 <div class="carousel-item row">
-                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/ZC0uOXz.jpg">
+                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/NjWUzFH.jpg">
                 </div>
                 <div class="carousel-item row">
-                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/AyORS8R.jpg">
+                    <img class="rounded col-md-12 lazyload" data-original="https://i.imgur.com/qoOznm3.jpg">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#photo" data-slide="prev">
@@ -126,33 +127,11 @@
     </div>
     <!-- Back To Top btn -->
     <a id="backTopBtn" class="btn backTopBtn"><i class="fas fa-chevron-circle-up fa-5x btn_color"></i></a>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var offset = 220;
-        var duration = 500;
-
-        if ($(this).scrollTop() > offset) {
-            $('.backTopBtn').fadeIn(duration);
-        } else {
-            $('.backTopBtn').fadeOut(duration);
-        }
-
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > offset) {
-                $('.backTopBtn').fadeIn(duration);
-            } else {
-                $('.backTopBtn').fadeOut(duration);
-            }
-        });
-
-        $('.backTopBtn').click(function(event) {
-            event.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, duration);
-            return false;
-        })
-    });
-    </script>
     <!-- footer -->
+    <div style="background: #a4a188;">
+        <h5 class="d-none d-lg-block" style="margin-left: 20px; margin-bottom: 0px;">COPYRIGHT © 2018, TAINAN GOURMET PLAZA. ALL RIGHTS RESERVED.</h5>
+        <h6 class="d-lg-none" style="margin-left: 20px; margin-bottom: 0px;">COPYRIGHT © 2018, TAINAN GOURMET PLAZA. ALL RIGHTS RESERVED.</h6>
+    </div>
 </body>
 
 </html>
