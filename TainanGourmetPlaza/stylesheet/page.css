@@ -100,9 +100,9 @@
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    background-color: #AAAAAA;
+    /* background-color: #AAAAAA; */
     vertical-align: bottom;
-    box-shadow: 3px 3px grey;
+    /* box-shadow: 3px 3px grey; */
     display: block;
 }
 
@@ -205,4 +205,8 @@ a:hover .hover {
 .title_text_center {
     text-align: center;
     display: block;
+}
+
+.map_color{
+
 }
