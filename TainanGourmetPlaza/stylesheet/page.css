@@ -1,4 +1,211 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);.infoBar{margin-top:5vh;margin-bottom:5vh}.infoPanel_appetizer{text-align:center;vertical-align:middle;box-shadow:0 3px #76c39f}.infoPanel_breakfast,.infoPanel_dessert{text-align:center;vertical-align:middle;box-shadow:0 3px #fbf5a8}.infoPanel_dessert{box-shadow:0 3px #edb2bb}.infoPanel_drinks,.infoPanel_mainCourse{text-align:center;vertical-align:middle;box-shadow:0 3px #60b9e9}.infoPanel_mainCourse{box-shadow:0 3px #afa3cf}.infoPanel_secretMenu{box-shadow:0 3px #003a70}.infoBar-content,.infoPanel_secretMenu,.infoPanel_soup{text-align:center;vertical-align:middle}.infoPanel_soup{box-shadow:0 3px #f9cf99}.infoBar-content{display:none;margin:2% auto}.infoBar:hover .infoBar-content{display:flex}.infoBar-content a{margin:auto}.otherImg,.restaurantImg{text-align:center;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}.restaurantImg{margin-top:2.5%;height:90%;width:90%}.otherImg{margin:auto;height:120px;width:initial}.restaurantSubTitle,.restaurantTitle{font-family:Noto Sans TC;text-align:left}.restaurantTitle{height:15px;font-size:2vw}.restaurantSubTitle{font-size:1.3vw;color:#aaa}.mapButton{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;background-color:#aaa;vertical-align:bottom;box-shadow:3px 3px gray;display:block}.mapImg{margin:10px auto;width:80%}#logo,#shadow{text-align:center;vertical-align:middle}#shadow{height:100%}@media screen and (min-width:992px){.mapButton:hover{background-color:#007bff}}@media screen and (max-width:992px){.restaurantSubTitle,.restaurantTitle{font-family:Noto Sans TC;text-align:left}.restaurantTitle{height:15px;font-size:x-large}.restaurantSubTitle{font-size:initial;color:#aaa}.infoBar-content{display:none;text-align:center;vertical-align:middle;margin:2% auto}.infoBar:hover .infoBar-content{display:block}.infoBar-content a,.otherImg{margin:auto}.otherImg{text-align:center;height:100px;width:initial;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}.rwd_btn{margin:10px 15px}}.image_btn{height:30px}.hover,a:hover .unhover{display:none}a:hover .hover{display:initial}.hr_thickness{color:#eae5c8;height:2px;border:0;background:#eae5c8}.title_text{font-family:Alegreya;margin:auto;text-align:left}.title_text_center{text-align:center;display:block}
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+.infoBar {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.infoPanel_appetizer {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #76c39f;
+}
+
+.infoPanel_breakfast {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #fbf5a8;
+}
+
+.infoPanel_dessert {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #edb2bb;
+}
+
+.infoPanel_drinks {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #60b9e9;
+}
+
+.infoPanel_mainCourse {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #afa3cf;
+}
+
+.infoPanel_secretMenu {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #003a70;
+}
+
+.infoPanel_soup {
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 3px #f9cf99;
+}
+
+.infoBar-content {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    margin: 2% auto;
+}
+
+.infoBar:hover .infoBar-content {
+    display: flex;
+}
+
+.infoBar-content a {
+    margin: auto;
+}
+
+.restaurantImg {
+    text-align: center;
+    margin-top: 2.5%;
+    height: 90%;
+    width: 90%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.otherImg {
+    text-align: center;
+    margin: auto;
+    height: 120px;
+    width: initial;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.restaurantTitle {
+    font-family: Noto Sans TC;
+    font-size: 2vw;
+    text-align: left;
+    height: 15px;
+}
+
+.restaurantSubTitle {
+    font-family: Noto Sans TC;
+    font-size: 1.3vw;
+    text-align: left;
+    color: #AAAAAA;
+}
+
+.mapButton {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #AAAAAA;
+    vertical-align: bottom;
+    box-shadow: 3px 3px grey;
+    display: block;
+}
+
+.mapImg {
+    margin: 10px auto;
+    width: 80%;
+}
+
+#logo {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#shadow {
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media screen and (min-width:992px) {
+    .mapButton:hover {
+        background-color: #007bff;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .restaurantTitle {
+        font-family: Noto Sans TC;
+        font-size: x-large;
+        text-align: left;
+        height: 15px;
+    }
+
+    .restaurantSubTitle {
+        font-family: Noto Sans TC;
+        font-size: initial;
+        text-align: left;
+        color: #AAAAAA;
+    }
+
+    .infoBar-content {
+        display: none;
+        text-align: center;
+        vertical-align: middle;
+        margin: 2% auto;
+    }
+
+    .infoBar:hover .infoBar-content {
+        display: block;
+    }
+
+    .infoBar-content a {
+        margin: auto;
+    }
+
+    .otherImg {
+        text-align: center;
+        margin: auto;
+        height: 100px;
+        width: initial;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    .rwd_btn{
+        margin: 10px 15px;
+    }
+}
+
+.image_btn {
+    height: 30px;
+}
+
+.hover {
+    display: none;
+}
+
+a:hover .unhover {
+    display: none;
+}
+
+a:hover .hover {
+    display: initial;
+}
+
+.hr_thickness {
+    color: #eae5c8;
+    height: 2px;
+    border: none;
+    background: #eae5c8;
+}
+
+.title_text {
+    font-family: Alegreya;
+    margin: auto;
+    text-align: left;
+}
+
+.title_text_center {
+    text-align: center;
+    display: block;
+}
 
 /* Latest compiled and minified CSS */
 /*!
@@ -84,9 +291,19 @@
 }
 
 /* Back to Top btn */
+@media screen and (max-width:992px) {
+    .fa-5x {
+        font-size: 3em !important;
+    }
+}
 
-Result
- Source map
- Restructure
- Beautify
-@media screen and (max-width:992px){.fa-5x{font-size:3em!important}}.backTopBtn .btn_color{color:#bdbdbd;border-radius:100px}.backTopBtn{position:fixed;bottom:2em;right:10px}
+.backTopBtn .btn_color{
+    color: #bdbdbd;
+    border-radius: 100px;
+}
+
+.backTopBtn{
+    position: fixed;
+    bottom: 2em;
+    right: 10px;
+}

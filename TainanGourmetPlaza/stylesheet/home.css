@@ -1,4 +1,83 @@
-.homeImg{height:100%;flex:1;padding:5px!important;border-radius:1rem}#logo,#shadow,#title,.homeImg{text-align:center;vertical-align:middle}#title{border:#000 5px solid}#shadow{height:100%}#photo .carousel-inner .row{margin-left:0;margin-right:0}#photo .carousel-inner .row img{padding:0}.image_btn{height:30px}.hover,a:hover .unhover{display:none}a:hover .hover{display:initial}.title_text{font-family:Alegreya;margin:auto;text-align:center;color:#a4a188}.description{background:#eae5c8;margin-top:50px;margin-bottom:100px;padding:100px 0;font-family:Courgette}.description .col-10{margin:auto}.description .col-10 h1,h3{display:inline}.hr_thickness{color:#eae5c8;height:2px;border:0;background:#eae5c8}
+#logo {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.homeImg {
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px !important;
+    border-radius: 1rem;
+}
+
+#title {
+    text-align: center;
+    vertical-align: middle;
+    border: black 5px solid;
+}
+
+#shadow {
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#photo .carousel-inner .row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#photo .carousel-inner .row img {
+    padding: 0px;
+}
+
+.image_btn {
+    height: 30px;
+}
+
+.hover {
+    display: none;
+}
+
+a:hover .unhover {
+    display: none;
+}
+
+a:hover .hover {
+    display: initial;
+}
+
+.title_text {
+    font-family: Alegreya;
+    margin: auto;
+    text-align: center;
+    color: #a4a188;
+}
+
+.description {
+    background: #eae5c8;
+    margin-top: 50px ;
+    margin-bottom: 100px;
+    padding: 100px 0;
+    font-family: Courgette;
+}
+
+.description .col-10{
+    margin: auto;
+}
+
+.description .col-10 h1, h3{
+    display: inline;
+}
+
+.hr_thickness {
+    color: #eae5c8;
+    height: 2px;
+    border: none;
+    background: #eae5c8;    
+}
 
 /* Latest compiled and minified CSS */
 /*!
@@ -84,4 +163,19 @@
 }
 
 /* Back to Top btn */
-@media screen and (max-width:992px){.fa-5x{font-size:3em!important}}.backTopBtn .btn_color{color:#bdbdbd;border-radius:100px}.backTopBtn{position:fixed;bottom:2em;right:10px}
+@media screen and (max-width:992px) {
+    .fa-5x {
+        font-size: 3em !important;
+    }
+}
+
+.backTopBtn .btn_color{
+    color: #bdbdbd;
+    border-radius: 100px;
+}
+
+.backTopBtn{
+    position: fixed;
+    bottom: 2em;
+    right: 10px;
+}
