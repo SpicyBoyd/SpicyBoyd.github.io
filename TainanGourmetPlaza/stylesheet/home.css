@@ -1,5 +1,15 @@
-body{
+.container-fluid{
+    padding: 0px !important;
+}
+
+.row {
     width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+#shadow {
+    padding: 0px;
 }
 
 #logo {

@@ -1,7 +1,17 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
-body{
+.container-fluid{
+    padding: 0px !important;
+}
+
+.row {
     width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+#shadow {
+    padding: 0px;
 }
 
 .infoBar {
@@ -172,7 +182,7 @@ body{
         border-radius: 10px;
     }
 
-    .rwd_btn{
+    .rwd_btn {
         margin: 10px 15px;
     }
 }
@@ -211,6 +221,4 @@ a:hover .hover {
     display: block;
 }
 
-.map_color{
-
-}
+.map_color {}
