@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
+body{
+    width: 100%;
+}
+
 .infoBar {
     margin-top: 5vh;
     margin-bottom: 5vh;
