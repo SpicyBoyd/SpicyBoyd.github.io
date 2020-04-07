@@ -3,7 +3,7 @@
 * [網頁連結](https://spicyboyd.github.io/project1)
 * 主旨：這是一個介紹 SpicyBoyd 的網頁，包含簡歷、學歷、經歷、技能、部落格及其他個人作品
 
-![](https://i.imgur.com/M9CIpxy.jpg)
+
 
 
 ## SpicyBoyd 相簿
